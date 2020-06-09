@@ -15,6 +15,10 @@ public class Graph : MonoBehaviour
     private int m_width;
     private int m_height;
 
+    //Breite und Höhe für die Algorithmen
+    public int Width {get { return m_width; } }
+    public int Height { get { return m_height; } }
+
     //richtungsmöglichkeiten für bewegung
     public static readonly Vector2[] allDirections =
     {
