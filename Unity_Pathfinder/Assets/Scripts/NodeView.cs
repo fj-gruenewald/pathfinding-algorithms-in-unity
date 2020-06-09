@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NodeView : MonoBehaviour
 {
     //Darstellung der Nodes
     public GameObject tile;
 
-    //Randeigenschaften / ränder schmaler 
+    //Randeigenschaften / ränder schmaler
     [Range(0, 0.5f)]
     public float borderSize = 0.15f;
 
     //neues model view objekt
     public void Init(Node node)
     {
-        if(tile != null)
+        if (tile != null)
         {
             //jedem Node ein Tile geben
             gameObject.name = "Node (" + node.xIndex + "," + node.yIndex + ")";
@@ -24,18 +22,19 @@ public class NodeView : MonoBehaviour
     }
 
     //Nodes farben zuteilen
-    void ColorNode(Color color, GameObject gobj)
+    private void ColorNode(Color color, GameObject gobj)
     {
-        if(gobj != null)
+        if (gobj != null)
         {
             Renderer gobjRenderer = gobj.GetComponent<Renderer>();
 
-            if(gobjRenderer != null)
+            if (gobjRenderer != null)
             {
                 gobjRenderer.material.color = color;
             }
         }
     }
+
     //üverladene Farbmethode
     public void ColorNode(Color color)
     {

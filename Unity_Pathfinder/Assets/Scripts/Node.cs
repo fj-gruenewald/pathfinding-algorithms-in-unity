@@ -15,6 +15,7 @@ public class Node
 
     //wenn kein index gesetzt wurde
     public int xIndex = -1;
+
     public int yIndex = -1;
 
     //Position von Nodes
