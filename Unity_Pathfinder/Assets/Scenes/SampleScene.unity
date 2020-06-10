@@ -204,6 +204,7 @@ MonoBehaviour:
   StartY: 0
   endX: 20
   endY: 10
+  timeStep: 0.1
 --- !u!4 &279247703
 Transform:
   m_ObjectHideFlags: 0
@@ -487,6 +488,7 @@ MonoBehaviour:
   frontierColor: {r: 1, g: 0, b: 1, a: 1}
   exploredColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   pathColor: {r: 0, g: 1, b: 1, a: 1}
+  isComplete: 0
 --- !u!4 &1724768776
 Transform:
   m_ObjectHideFlags: 0

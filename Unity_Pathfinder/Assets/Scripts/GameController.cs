@@ -20,6 +20,9 @@ public class GameController : MonoBehaviour
     public int endX = 20;
     public int endY = 10;
 
+    //Zeit die ein Schritt benötigt
+    public float timeStep = 0.1f;
+
     private void Start()
     {
         //haben mapdata und graph daten
@@ -44,6 +47,7 @@ public class GameController : MonoBehaviour
                 Node startNode = graph.nodes[startX, StartY];
                 Node endNode = graph.nodes[endX, endY];
                 pathfinder.Init(graph, graphView, startNode, endNode);
+                StartCoroutine(pathfinder.SearchRoutine(timeStep));
             }
         }
     }
