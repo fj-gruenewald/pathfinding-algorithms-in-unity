@@ -18,8 +18,8 @@ Planned Features:
 
 
 Current Features:
-  ✔ Intelligent Grid System
-  ✔ Breadth First Search
-  ✔ Loading of Custom Maps
+  - Intelligent Grid System
+  - Breadth First Search
+  - Loading of Custom Maps
 
   
