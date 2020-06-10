@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-// enum --> kann gelaufen werden oder ist der weg blockiert
+//kann gelaufen werden oder ist der weg blockiert
 public enum NodeType
 {
     Open = 0,
@@ -10,19 +10,21 @@ public enum NodeType
 
 public class Node
 {
-    //
+    //Zeigt das ein Knoten begehbar ist
     public NodeType nodeType = NodeType.Open;
 
     //wenn kein index gesetzt wurde
     public int xIndex = -1;
-
     public int yIndex = -1;
 
     //Position von Nodes
     public Vector3 position;
 
-    //Nachbarn
+    //Liste der Nachbarn
     public List<Node> neighbors = new List<Node>();
+
+    //Die Kosten der gelaufenen Kanten
+    public float distanceTraveled = Mathf.Infinity;
 
     //
     public Node previous = null;

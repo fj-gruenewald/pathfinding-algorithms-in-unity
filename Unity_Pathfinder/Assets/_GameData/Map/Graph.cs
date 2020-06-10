@@ -11,7 +11,6 @@ public class Graph : MonoBehaviour
 
     //Informationen über die Karte
     private int[,] m_mapData;
-
     private int m_width;
     private int m_height;
 
@@ -108,5 +107,24 @@ public class Graph : MonoBehaviour
     private List<Node> GetNeighbors(int x, int y)
     {
         return GetNeighbors(x, y, nodes, allDirections);
+    }
+
+    //Wegkosten für Dijkstra berechnen
+    public float GetNodeDistance(Node source, Node target)
+    {
+        //Abstand von 2 unabhängigen Punkten über x und y Werte 
+        int dx = Mathf.Abs(source.xIndex - target.xIndex);
+        int dy = Mathf.Abs(source.yIndex - target.yIndex);
+
+        //Deltas für dx, dy bestimmen
+        int min = Mathf.Min(dx, dy);
+        int max = Mathf.Max(dx, dy);
+
+        //Berechnen von Diagonal und Gerade
+        int diagonalSteps = min;
+        int straightSteps = max - min;
+
+        //Gesamte Kantenkosten
+        return (1.4f * diagonalSteps + straightSteps);
     }
 }
