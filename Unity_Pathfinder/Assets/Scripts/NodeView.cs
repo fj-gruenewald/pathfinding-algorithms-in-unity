@@ -66,9 +66,7 @@ public class NodeView : MonoBehaviour
             //Gameobjekte anzeigen aufrufen
             EnableObject(arrow, true);
 
-            //Rotieren der Pfeile in die richtige Richtung
-            //info: durch vector3 node1(x1, y1, z1); node2(x2, y2, z2); differenziert(x2-x1, y2-y2, z2-z1)
-            //https://docs.unity3d.com/ScriptReference/Quaternion.html
+            //Rotieren der Pfeile in die richtige Richtung info: durch vector3 node1(x1, y1, z1); node2(x2, y2, z2); differenziert(x2-x1, y2-y2, z2-z1)
             Vector3 dirToPrevious = (m_node.previous.position - m_node.position).normalized;
             arrow.transform.rotation = Quaternion.LookRotation(dirToPrevious);
         }
