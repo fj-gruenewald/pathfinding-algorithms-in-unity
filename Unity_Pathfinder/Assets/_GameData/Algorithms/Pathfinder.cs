@@ -14,8 +14,8 @@ public class Pathfinder : MonoBehaviour
     Graph m_graph;
     GraphView m_graphView;
 
-    //Queue abzuarbeitender Knoten
-    Queue<Node> m_frontierNodes;
+    //Queue abzuarbeitender Knoten / Update: zur PriorityQueue
+    PriorityQueue<Node> m_frontierNodes;
 
     //Bereits besuchte Knoten
     List<Node> m_exploredNodes;
@@ -28,7 +28,7 @@ public class Pathfinder : MonoBehaviour
     public Color endColor = Color.red;
     public Color frontierColor = Color.magenta;
     public Color exploredColor = Color.gray;
-    public Color pathColor = Color.cyan;
+    public Color pathColor = new Color(38f, 114f, 76f, 1f);
 
     //Visualisierung steuern
     public bool showIterations = true;
@@ -45,8 +45,10 @@ public class Pathfinder : MonoBehaviour
         BreadthFirstSearch = 0,
         DepthFirstSearch = 1,
         DijkstraAlgorithm = 2,
-        GreedyBestFirstSearch =3,
-        AStarSearch = 4
+        GreedyBestFirstSearch = 3,
+        GreedyBestFirstSearchManhattan = 4 ,
+        AStarSearch = 5,
+        AStarSearchManhattan = 6
     }
 
     //Standard Suchmodus
@@ -79,7 +81,7 @@ public class Pathfinder : MonoBehaviour
         ShowColors(graphView, start, end);
 
         //initialisierung
-        m_frontierNodes = new Queue<Node>();
+        m_frontierNodes = new PriorityQueue<Node>();
         m_frontierNodes.Enqueue(start);
         m_exploredNodes = new List<Node>();
         m_pathNodes = new List<Node>();
@@ -177,16 +179,23 @@ public class Pathfinder : MonoBehaviour
                 //Durchführen der Suchalgorithmen
                 if(mode == Mode.BreadthFirstSearch)
                 {
-                    //Verarbeitung der Nachbarn
                     ExpandFrontierBreadthFirstSearch(currentNode);
                 }
                 else if(mode == Mode.DijkstraAlgorithm)
                 {
                     ExpandFrontierDijkstraAlgorithm(currentNode);
                 }
+                else if (mode == Mode.GreedyBestFirstSearch)
+                {
+                    ExpandFrontierGreedyBestFirstSearch(currentNode);
+                }
+                else if (mode == Mode.AStarSearch)
+                {
+                    ExpandFrontierAStarSearch(currentNode);
+                }
 
                 //Wenn es ein enpunkt gibt
-                if(m_frontierNodes.Contains(m_endNode))
+                if (m_frontierNodes.Contains(m_endNode))
                 {
                     //Knoten rückwärts in pathnodes übergeben
                     m_pathNodes = GetPathNodes(m_endNode);
@@ -260,6 +269,11 @@ public class Pathfinder : MonoBehaviour
 
                     //Informationen über Vorgängerknoten Speichern
                     node.neighbors[i].previous = node;
+
+                    //Fix für die Breitensuche
+                    node.neighbors[i].priority = m_exploredNodes.Count;
+
+                    //Neuen Knoten einsetzten
                     m_frontierNodes.Enqueue(node.neighbors[i]);
                 }
             }
@@ -292,9 +306,86 @@ public class Pathfinder : MonoBehaviour
                         node.neighbors[i].distanceTraveled = newDistanceTraveled;
                     }
 
-                    //Informationen über Vorgängerknoten Speichern
+                    //Informationen über Vorgängerknoten Speichern / Update: Kosten übergeben
                     if (!m_frontierNodes.Contains(node.neighbors[i]))
                     {
+                        node.neighbors[i].priority = (int)node.neighbors[i].distanceTraveled;
+                        m_frontierNodes.Enqueue(node.neighbors[i]);
+                    }
+                }
+            }
+        }
+    }
+
+    //Methode zum findes Weges !!Gierige Bestensuche!!
+    void ExpandFrontierGreedyBestFirstSearch(Node node)
+    {
+        //Crash vermeiden
+        if (node != null)
+        {
+            //alle nachbarn des Knoten abarbeiten
+            for (int i = 0; i < node.neighbors.Count; i++)
+            {
+                //Nur NEUE Nachbarn verarbeiten nicht bereits verarbeitete Knoten!
+                if (!m_exploredNodes.Contains(node.neighbors[i]) && !m_frontierNodes.Contains(node.neighbors[i]))
+                {
+                    //Distanz von Aktuellem Knoten zu den Nachbarn
+                    float distanceToNeighbor = m_graph.GetNodeDistance(node, node.neighbors[i]);
+                    float newDistanceTraveled = distanceToNeighbor + node.distanceTraveled;
+
+                    //Menge der durchlaufenen Knoten
+                    node.neighbors[i].distanceTraveled = newDistanceTraveled;
+
+                    //Informationen über Vorgängerknoten Speichern
+                    node.neighbors[i].previous = node;
+
+                    //Fix für die Gierige Bestensuche
+                    if (m_graph != null)
+                    {
+                        node.neighbors[i].priority = (int)m_graph.GetNodeDistance(node.neighbors[i], m_endNode);
+                    }
+
+                    //Neuen Knoten einsetzten
+                    m_frontierNodes.Enqueue(node.neighbors[i]);
+                }
+            }
+        }
+    }
+
+    //Methode zum finden des Weges !!A* Suche!!
+    void ExpandFrontierAStarSearch(Node node)
+    {
+        //Crash vermeiden
+        if (node != null)
+        {
+            //alle nachbarn des Knoten abarbeiten
+            for (int i = 0; i < node.neighbors.Count; i++)
+            {
+                //Nur NEUE Nachbarn verarbeiten nicht bereits verarbeitete Knoten!
+                if (!m_exploredNodes.Contains(node.neighbors[i]))
+                {
+                    //Distanz von Aktuellem Knoten zu den Nachbarn
+                    float distanceToNeighbor = m_graph.GetNodeDistance(node, node.neighbors[i]);
+                    float newDistanceTraveled = distanceToNeighbor + node.distanceTraveled;
+
+                    //Wenn der Weg länger ist als ein bereits gefundener anderer Weg
+                    if (float.IsPositiveInfinity(node.neighbors[i].distanceTraveled) || newDistanceTraveled < node.neighbors[i].distanceTraveled)
+                    {
+                        //Informationen über Vorgängerknoten Speichern
+                        node.neighbors[i].previous = node;
+
+                        //kosten speichern
+                        node.neighbors[i].distanceTraveled = newDistanceTraveled;
+                    }
+
+                    //Berechnung für A* f(n) = g(n) + h(n) --> f(n) = Distanz von Startpunkt + Wahrscheinliche Distanz zum Ziel
+                    if (!m_frontierNodes.Contains(node.neighbors[i]) && m_graph != null)
+                    {
+                        //h(n)
+                        int distanceToEnd = (int) m_graph.GetNodeDistance(node.neighbors[i], m_endNode);
+
+                        //f(n)
+                        node.neighbors[i].priority = (int)node.neighbors[i].distanceTraveled + distanceToEnd;
                         m_frontierNodes.Enqueue(node.neighbors[i]);
                     }
                 }

@@ -12,8 +12,8 @@ public class GraphView : MonoBehaviour
     //array der nodeviews zum färben
     public NodeView[,] nodeViews;
 
-    //Infofarben
-    public Color baseColor = Color.white;
+    //Farben der Kartenelemente
+    public Color baseColor = Color.grey;
 
     public Color wallColor = Color.black;
 

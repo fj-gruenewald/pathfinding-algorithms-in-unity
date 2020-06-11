@@ -127,4 +127,13 @@ public class Graph : MonoBehaviour
         //Gesamte Kantenkosten
         return (1.4f * diagonalSteps + straightSteps);
     }
+
+    //Wegkosten nach Manhattan Heuristik
+    public int GetManhattanDistance(Node source, Node target)
+    {
+        //Abstand von 2 unabhängigen Punkten über x und y Werte 
+        int dx = Mathf.Abs(source.xIndex - target.xIndex);
+        int dy = Mathf.Abs(source.yIndex - target.yIndex);
+        return (dx + dy);
+    }
 }
