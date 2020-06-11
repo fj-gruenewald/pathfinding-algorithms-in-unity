@@ -347,7 +347,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0}
+  m_BackGroundColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeViewPrefab: {fileID: 6286587880733063036, guid: 71fb478b3c8e45342a0c555126841c1c,
     type: 3}
-  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  baseColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
   wallColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1724768774
 GameObject:
@@ -483,16 +483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1349448967bdde468ada99c56bbdaac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startColor: {r: 0, g: 1, b: 0, a: 1}
+  startColor: {r: 0.24705882, g: 0.7490196, b: 0.24705882, a: 0.003921569}
   endColor: {r: 1, g: 0, b: 0, a: 1}
-  frontierColor: {r: 1, g: 0, b: 1, a: 1}
-  exploredColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  pathColor: {r: 0, g: 1, b: 1, a: 1}
+  frontierColor: {r: 0, g: 0.6484008, b: 1, a: 1}
+  exploredColor: {r: 0.6156863, g: 0.09019608, b: 0.039215688, a: 0.003921569}
+  pathColor: {r: 0.24705882, g: 0.7490196, b: 0.24705882, a: 0.003921569}
   showIterations: 1
   showColor: 1
   exitOnGoal: 1
   isComplete: 0
-  mode: 5
+  mode: 2
 --- !u!4 &1724768776
 Transform:
   m_ObjectHideFlags: 0

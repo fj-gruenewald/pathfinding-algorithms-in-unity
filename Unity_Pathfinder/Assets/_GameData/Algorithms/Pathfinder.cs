@@ -28,7 +28,7 @@ public class Pathfinder : MonoBehaviour
     public Color endColor = Color.red;
     public Color frontierColor = Color.magenta;
     public Color exploredColor = Color.gray;
-    public Color pathColor = new Color(38f, 114f, 76f, 1f);
+    public Color pathColor = Color.cyan;
 
     //Visualisierung steuern
     public bool showIterations = true;
