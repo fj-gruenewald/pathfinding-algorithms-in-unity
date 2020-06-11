@@ -41,7 +41,8 @@ public class Node: IComparable<Node>
         this.nodeType = nodeType;
     }
 
-    //Schnittstelle für die PriorityQueue Info: Min Queue --> kleine Werte wandern an den Anfang
+    //Schnittstelle für die PriorityQueue. Info: Min Queue --> kleine Werte wandern an den Anfang
+    //node.CompareTo(otherNode); -1, 1, 0
     public int CompareTo(Node other)
     {
         //Wenn priority von Knoten 1 höher als Knoten 2
