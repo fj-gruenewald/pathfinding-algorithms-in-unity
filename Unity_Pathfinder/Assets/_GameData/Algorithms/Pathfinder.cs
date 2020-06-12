@@ -1,30 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
 using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
     //Start und Endpunkt
-    Node m_startNode;
-    Node m_endNode;
+    private Node m_startNode;
+
+    private Node m_endNode;
 
     //Referenzen zu Darstellenden Objekten
-    Graph m_graph;
-    GraphView m_graphView;
+    private Graph m_graph;
+
+    private GraphView m_graphView;
 
     //Queue abzuarbeitender Knoten / Update: zur PriorityQueue
-    PriorityQueue<Node> m_frontierNodes;
+    private PriorityQueue<Node> m_frontierNodes;
 
     //Bereits besuchte Knoten
-    List<Node> m_exploredNodes;
+    private List<Node> m_exploredNodes;
 
     //Liste des kürzesten weges
-    List<Node> m_pathNodes;
+    private List<Node> m_pathNodes;
 
     //Farben für den Ablauf info: Color32 für normale RGB Werte Bsp. Color32(216, 216, 216, 255) , Color für float Werte Bsp. Color(0.85f, 0.85f, 0.85f, 1f)
     public Color startColor = Color.green;
+
     public Color endColor = Color.red;
     public Color frontierColor = Color.magenta;
     public Color exploredColor = Color.gray;
@@ -32,12 +33,14 @@ public class Pathfinder : MonoBehaviour
 
     //Visualisierung steuern
     public bool showIterations = true;
+
     public bool showColor = true;
     public bool exitOnGoal = true;
 
     //Suchvariablen
     public bool isComplete = false;
-    int m_iterations = 0;
+
+    private int m_iterations = 0;
 
     //Suchmodus wählen
     public enum Mode
@@ -46,7 +49,7 @@ public class Pathfinder : MonoBehaviour
         DepthFirstSearch = 1,
         DijkstraAlgorithm = 2,
         GreedyBestFirstSearch = 3,
-        GreedyBestFirstSearchManhattan = 4 ,
+        GreedyBestFirstSearchManhattan = 4,
         AStarSearch = 5,
         AStarSearchManhattan = 6
     }
@@ -92,7 +95,7 @@ public class Pathfinder : MonoBehaviour
             //Durch alle Knoten gehen
             for (int y = 0; y < m_graph.Height; y++)
             {
-                //Zurück zum Anfang 
+                //Zurück zum Anfang
                 m_graph.nodes[x, y].Reset();
             }
         }
@@ -101,38 +104,37 @@ public class Pathfinder : MonoBehaviour
         isComplete = false;
         m_iterations = 0;
         m_startNode.distanceTraveled = 0;
-
     }
 
     //Überladene ShowColors
-    void ShowColors()
+    private void ShowColors()
     {
         ShowColors(m_graphView, m_startNode, m_endNode);
     }
 
     //Knoten färben
-    void ShowColors(GraphView graphView, Node start, Node end)
+    private void ShowColors(GraphView graphView, Node start, Node end)
     {
         //Crash durch fehlende Werte vermeiden
-        if(graphView == null || start == null || end == null)
+        if (graphView == null || start == null || end == null)
         {
             return;
         }
 
         //Färben der Knoten die verarbeitet werden
-        if(m_frontierNodes != null)
+        if (m_frontierNodes != null)
         {
             graphView.ColorNodes(m_frontierNodes.ToList(), frontierColor);
         }
 
         //färben der abgearbeiteteten Knoten
-        if(m_exploredNodes != null)
+        if (m_exploredNodes != null)
         {
             graphView.ColorNodes(m_exploredNodes, exploredColor);
         }
 
         //Färben der Knoten des gefundenen Weges
-        if(m_pathNodes != null && m_pathNodes.Count > 0)
+        if (m_pathNodes != null && m_pathNodes.Count > 0)
         {
             graphView.ColorNodes(m_pathNodes, pathColor);
         }
@@ -162,26 +164,26 @@ public class Pathfinder : MonoBehaviour
         yield return null;
 
         //durchführen der Suche
-        while(!isComplete)
+        while (!isComplete)
         {
-            if(m_frontierNodes.Count > 0)
+            if (m_frontierNodes.Count > 0)
             {
                 //Knoten aus "nächste Knoten" liste entfernen
                 Node currentNode = m_frontierNodes.Dequeue();
                 m_iterations++;
 
                 //Knoten zu "besuchte Knoten" liste hinzufügen
-                if(!m_exploredNodes.Contains(currentNode))
+                if (!m_exploredNodes.Contains(currentNode))
                 {
                     m_exploredNodes.Add(currentNode);
                 }
 
                 //Durchführen der Suchalgorithmen
-                if(mode == Mode.BreadthFirstSearch)
+                if (mode == Mode.BreadthFirstSearch)
                 {
                     ExpandFrontierBreadthFirstSearch(currentNode);
                 }
-                else if(mode == Mode.DijkstraAlgorithm)
+                else if (mode == Mode.DijkstraAlgorithm)
                 {
                     ExpandFrontierDijkstraAlgorithm(currentNode);
                 }
@@ -201,7 +203,7 @@ public class Pathfinder : MonoBehaviour
                     m_pathNodes = GetPathNodes(m_endNode);
 
                     //Suche beenden wenn Ziel gefunden
-                    if(exitOnGoal)
+                    if (exitOnGoal)
                     {
                         isComplete = true;
 
@@ -219,13 +221,11 @@ public class Pathfinder : MonoBehaviour
                     //
                     yield return new WaitForSeconds(timeStep);
                 }
-
             }
             else
             {
                 //Wenn alles durchlaufen wurde
                 isComplete = true;
-
             }
         }
 
@@ -234,7 +234,6 @@ public class Pathfinder : MonoBehaviour
 
         //Ausgabe: Ende der Zeitmessung für die Anzeige
         Debug.Log("Zeit bis zur Terminierung = " + (Time.time - timeStart).ToString() + " Sekunden");
-
     }
 
     //Methode zum verwalten der Visualisierungen
@@ -249,13 +248,13 @@ public class Pathfinder : MonoBehaviour
     }
 
     //Methode zum finden des Weges !!Breitensuche!!
-    void ExpandFrontierBreadthFirstSearch(Node node)
+    private void ExpandFrontierBreadthFirstSearch(Node node)
     {
         //Crash vermeiden
-        if(node != null)
+        if (node != null)
         {
             //alle nachbarn des Knoten abarbeiten
-            for(int i = 0; i < node.neighbors.Count; i++)
+            for (int i = 0; i < node.neighbors.Count; i++)
             {
                 //Nur NEUE Nachbarn verarbeiten nicht bereits verarbeitete Knoten!
                 if (!m_exploredNodes.Contains(node.neighbors[i]) && !m_frontierNodes.Contains(node.neighbors[i]))
@@ -281,7 +280,7 @@ public class Pathfinder : MonoBehaviour
     }
 
     //Methode zum finden des Weges !!Dijkstra!!
-    void ExpandFrontierDijkstraAlgorithm(Node node)
+    private void ExpandFrontierDijkstraAlgorithm(Node node)
     {
         //Crash vermeiden
         if (node != null)
@@ -318,7 +317,7 @@ public class Pathfinder : MonoBehaviour
     }
 
     //Methode zum findes Weges !!Gierige Bestensuche!!
-    void ExpandFrontierGreedyBestFirstSearch(Node node)
+    private void ExpandFrontierGreedyBestFirstSearch(Node node)
     {
         //Crash vermeiden
         if (node != null)
@@ -353,7 +352,7 @@ public class Pathfinder : MonoBehaviour
     }
 
     //Methode zum finden des Weges !!A* Suche!!
-    void ExpandFrontierAStarSearch(Node node)
+    private void ExpandFrontierAStarSearch(Node node)
     {
         //Crash vermeiden
         if (node != null)
@@ -382,7 +381,7 @@ public class Pathfinder : MonoBehaviour
                     if (!m_frontierNodes.Contains(node.neighbors[i]) && m_graph != null)
                     {
                         //h(n)
-                        int distanceToEnd = (int) m_graph.GetNodeDistance(node.neighbors[i], m_endNode);
+                        int distanceToEnd = (int)m_graph.GetNodeDistance(node.neighbors[i], m_endNode);
 
                         //f(n)
                         node.neighbors[i].priority = (int)node.neighbors[i].distanceTraveled + distanceToEnd;
@@ -394,12 +393,12 @@ public class Pathfinder : MonoBehaviour
     }
 
     //PathNode liste füllen
-    List<Node> GetPathNodes(Node exitNode)
+    private List<Node> GetPathNodes(Node exitNode)
     {
         List<Node> path = new List<Node>();
 
         //Wenn es kein Ende gibt gibt es keinen weg
-        if(exitNode == null)
+        if (exitNode == null)
         {
             return path;
         }
@@ -409,15 +408,12 @@ public class Pathfinder : MonoBehaviour
 
         Node currentNode = exitNode.previous;
 
-        while(currentNode != null)
+        while (currentNode != null)
         {
             //Den neuen Knoten immer an den Anfang packen
             path.Insert(0, currentNode);
             currentNode = currentNode.previous;
         }
         return path;
-
     }
-
-
 }

@@ -11,11 +11,13 @@ public class Graph : MonoBehaviour
 
     //Informationen über die Karte
     private int[,] m_mapData;
+
     private int m_width;
     private int m_height;
 
     //Breite und Höhe für die Algorithmen
-    public int Width {get { return m_width; } }
+    public int Width { get { return m_width; } }
+
     public int Height { get { return m_height; } }
 
     //richtungsmöglichkeiten für bewegung
@@ -112,7 +114,7 @@ public class Graph : MonoBehaviour
     //Wegkosten für Dijkstra berechnen
     public float GetNodeDistance(Node source, Node target)
     {
-        //Abstand von 2 unabhängigen Punkten über x und y Werte 
+        //Abstand von 2 unabhängigen Punkten über x und y Werte
         int dx = Mathf.Abs(source.xIndex - target.xIndex);
         int dy = Mathf.Abs(source.yIndex - target.yIndex);
 
@@ -131,7 +133,7 @@ public class Graph : MonoBehaviour
     //Wegkosten nach Manhattan Heuristik
     public int GetManhattanDistance(Node source, Node target)
     {
-        //Abstand von 2 unabhängigen Punkten über x und y Werte 
+        //Abstand von 2 unabhängigen Punkten über x und y Werte
         int dx = Mathf.Abs(source.xIndex - target.xIndex);
         int dy = Mathf.Abs(source.yIndex - target.yIndex);
         return (dx + dy);

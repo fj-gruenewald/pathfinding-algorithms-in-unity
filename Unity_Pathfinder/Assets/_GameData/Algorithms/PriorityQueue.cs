@@ -1,12 +1,10 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
-using System;
 
-public class PriorityQueue<T> where T: IComparable<T>
+public class PriorityQueue<T> where T : IComparable<T>
 {
     //Queue Daten
-    List<T> data;
+    private List<T> data;
 
     //Anzahl an Elementen in Queue
     public int Count
@@ -102,7 +100,6 @@ public class PriorityQueue<T> where T: IComparable<T>
             data[childIndex] = tmp;
 
             parentIndex = childIndex;
-
         }
         return frontItem;
     }

@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     //HowItWorks laden
     public void LoadHowItWorks()
     {
-        
     }
 
     //ToolSettings laden
@@ -27,5 +26,4 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Wird beendet!");
         Application.Quit();
     }
-
 }

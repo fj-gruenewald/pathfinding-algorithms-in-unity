@@ -9,13 +9,14 @@ public enum NodeType
     Blocked = 1
 }
 
-public class Node: IComparable<Node>
+public class Node : IComparable<Node>
 {
     //Zeigt das ein Knoten begehbar ist
     public NodeType nodeType = NodeType.Open;
 
     //wenn kein index gesetzt wurde
     public int xIndex = -1;
+
     public int yIndex = -1;
 
     //Position von Nodes
@@ -46,11 +47,11 @@ public class Node: IComparable<Node>
     public int CompareTo(Node other)
     {
         //Wenn priority von Knoten 1 höher als Knoten 2
-        if(this.priority < other.priority)
+        if (this.priority < other.priority)
         {
             return -1;
         }
-        else if(this.priority > other.priority)
+        else if (this.priority > other.priority)
         {
             return 1;
         }

@@ -59,19 +59,19 @@ public class GraphView : MonoBehaviour
     //Färben von Nodes für den Ablauf
     public void ColorNodes(List<Node> nodes, Color color)
     {
-        foreach(Node n in nodes)
+        foreach (Node n in nodes)
         {
-            if(n != null)
+            if (n != null)
             {
                 //NodeView zu Node finden
                 NodeView nodeView = nodeViews[n.xIndex, n.yIndex];
 
-                if(nodeView != null)
+                if (nodeView != null)
                 {
                     //Node färben
                     nodeView.ColorNode(color);
                 }
             }
         }
-    }  
+    }
 }

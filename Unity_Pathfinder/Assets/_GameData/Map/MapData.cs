@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class MapData : MonoBehaviour
 {
@@ -23,7 +23,7 @@ public class MapData : MonoBehaviour
         List<string> lines = new List<string>();
 
         //string in variable ablegen
-        if(txtAsset != null)
+        if (txtAsset != null)
         {
             string textData = txtAsset.text;
 
@@ -48,7 +48,7 @@ public class MapData : MonoBehaviour
     //Überladene GetTextFromFile Methode zur Ausgabe
     public List<string> GetTextFromFile()
     {
-        if(textAsset == null)
+        if (textAsset == null)
         {
             textAsset = Resources.Load(resourcePath + "/Testing") as TextAsset;
         }
@@ -62,9 +62,9 @@ public class MapData : MonoBehaviour
         height = textLines.Count;
 
         //breite --> längste linie im dokument
-        foreach(string line in textLines)
+        foreach (string line in textLines)
         {
-            if(line.Length > width)
+            if (line.Length > width)
             {
                 width = line.Length;
             }

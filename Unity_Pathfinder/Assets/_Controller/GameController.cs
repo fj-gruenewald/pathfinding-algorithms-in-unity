@@ -1,5 +1,4 @@
-﻿using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
@@ -14,10 +13,12 @@ public class GameController : MonoBehaviour
 
     //Start Koordinaten
     public int startX = 0;
+
     public int StartY = 0;
 
     //End Koordinaten
     public int endX = 20;
+
     public int endY = 10;
 
     //Zeit die ein Schritt benötigt
@@ -42,7 +43,7 @@ public class GameController : MonoBehaviour
             }
 
             //Ausführen des Pathfinders
-            if(graph.IsWithinBounds(startX, StartY) && graph.IsWithinBounds(endX, endY) && pathfinder != null)
+            if (graph.IsWithinBounds(startX, StartY) && graph.IsWithinBounds(endX, endY) && pathfinder != null)
             {
                 Node startNode = graph.nodes[startX, StartY];
                 Node endNode = graph.nodes[endX, endY];

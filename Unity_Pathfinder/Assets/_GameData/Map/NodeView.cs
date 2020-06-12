@@ -42,7 +42,7 @@ public class NodeView : MonoBehaviour
     }
 
     //GameObjects anzeigen
-    void EnableObject(GameObject gobj, bool state)
+    private void EnableObject(GameObject gobj, bool state)
     {
         if (gobj != null)
         {
