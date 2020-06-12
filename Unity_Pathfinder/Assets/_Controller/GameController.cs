@@ -48,8 +48,12 @@ public class GameController : MonoBehaviour
                 Node startNode = graph.nodes[startX, StartY];
                 Node endNode = graph.nodes[endX, endY];
                 pathfinder.Init(graph, graphView, startNode, endNode);
-                StartCoroutine(pathfinder.SearchRoutine(timeStep));
             }
         }
+    }
+
+    public void StartPathfinding()
+    {
+        StartCoroutine(pathfinder.SearchRoutine(timeStep));
     }
 }
