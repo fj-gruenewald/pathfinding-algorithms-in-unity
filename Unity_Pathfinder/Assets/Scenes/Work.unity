@@ -4588,7 +4588,7 @@ MonoBehaviour:
   showColor: 1
   exitOnGoal: 1
   isComplete: 0
-  mode: 5
+  mode: 0
 --- !u!4 &1724768776
 Transform:
   m_ObjectHideFlags: 0
