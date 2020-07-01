@@ -39,7 +39,6 @@ public class Pathfinder : MonoBehaviour
 
     //Suchvariablen
     public bool isComplete = false;
-
     private int m_iterations = 0;
 
     //Suchmodus wählen
@@ -196,7 +195,7 @@ public class Pathfinder : MonoBehaviour
                     ExpandFrontierAStarSearch(currentNode);
                 }
 
-                //Wenn es ein enpunkt gibt
+                //Wenn es ein endpunkt gibt
                 if (m_frontierNodes.Contains(m_endNode))
                 {
                     //Knoten rückwärts in pathnodes übergeben
