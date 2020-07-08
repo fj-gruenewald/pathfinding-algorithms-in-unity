@@ -52,8 +52,15 @@ public class GameController : MonoBehaviour
         }
     }
 
+    //Button Start
     public void StartPathfinding()
     {
         StartCoroutine(pathfinder.SearchRoutine(timeStep));
+    }
+
+    //Button Reset
+    public void ResetMapArea()
+    {
+
     }
 }
