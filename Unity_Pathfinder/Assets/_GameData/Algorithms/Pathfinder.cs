@@ -33,7 +33,6 @@ public class Pathfinder : MonoBehaviour
 
     //Visualisierung steuern
     public bool showIterations = true;
-
     public bool showColor = true;
     public bool exitOnGoal = true;
 
@@ -45,12 +44,10 @@ public class Pathfinder : MonoBehaviour
     public enum Mode
     {
         BreadthFirstSearch = 0,
-        DepthFirstSearch = 1,
-        DijkstraAlgorithm = 2,
-        GreedyBestFirstSearch = 3,
-        GreedyBestFirstSearchManhattan = 4,
-        AStarSearch = 5,
-        AStarSearchManhattan = 6
+        DijkstraAlgorithm = 1,
+        GreedyBestFirstSearch = 2,
+        AStarSearch = 3,
+
     }
 
     //Standard Suchmodus
