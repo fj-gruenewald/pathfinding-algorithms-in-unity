@@ -5,18 +5,21 @@ The program is created with the Unity Engine and the scripts are written in C#. 
 
 
 Planned Features:
-  - Depth First Search
-  - Informations about the Algorithms Run
+  - better Text for the Wiki with explanations of each Algorithm
+  - the possibility to use several maps
   - the possibility to create your own maps
+  - options to change the start and endpoint
+
 
 
 Current Features:
   - Intelligent Grid System
   - Breadth First Search
-  - Loading of Custom Maps
-  - Dijkstra Algorithm with Priority Queue
   - Greedy Best-First Search
+  - Dijkstra Algorithm with Priority Queue
   - A* Search
+  - Informations about the Algorithms Run
   - A Wiki with Informations about the Algorithms
+  - Informations about the Algorithms Run
 
   
