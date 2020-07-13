@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Pathfinder : MonoBehaviour
 {
+    //Initialisierung von Fremdklassen
+    public IngameInfos ingameInfos;
+    public IngameOptionsMenu ingameOptionsMenu;
+
     //Start und Endpunkt
     private Node m_startNode;
-
     private Node m_endNode;
 
     //Referenzen zu Darstellenden Objekten
     private Graph m_graph;
-
     private GraphView m_graphView;
 
     //Queue abzuarbeitender Knoten / Update: zur PriorityQueue
     private PriorityQueue<Node> m_frontierNodes;
-
+    
     //Bereits besuchte Knoten
     private List<Node> m_exploredNodes;
 
@@ -30,11 +33,6 @@ public class Pathfinder : MonoBehaviour
     public Color frontierColor = Color.magenta;
     public Color exploredColor = Color.gray;
     public Color pathColor = Color.cyan;
-
-    //Visualisierung steuern
-    public bool showIterations = true;
-    public bool showColor = true;
-    public bool exitOnGoal = true;
 
     //Suchvariablen
     public bool isComplete = false;
@@ -59,14 +57,14 @@ public class Pathfinder : MonoBehaviour
         //nichts darf fehlen
         if (start == null || endColor == null || graph == null || graphView == null)
         {
-            Debug.LogWarning("Irgendetwas stimmt mit Hasi nicht! pathfinder_Init_component-missing");
+            Debug.LogWarning("There are Mice in the Computer #42! pathfinder_Init_component-missing");
             return;
         }
 
         //start und endpunkt dürfen nicht in wänden liegen
         if (start.nodeType == NodeType.Blocked || end.nodeType == NodeType.Blocked)
         {
-            Debug.LogWarning("So ein Feuerball Junge! pathfinder_Init_start/end-blocked");
+            Debug.LogWarning("There are Mice in the Computer #42! pathfinder_Init_start/end-blocked");
             return;
         }
 
@@ -199,9 +197,12 @@ public class Pathfinder : MonoBehaviour
                     m_pathNodes = GetPathNodes(m_endNode);
 
                     //Suche beenden wenn Ziel gefunden
-                    if (exitOnGoal)
+                    if (ingameOptionsMenu.GetExitOnGoal())
                     {
                         isComplete = true;
+
+                        //Ausgabe: UserInterface
+                        ingameInfos.SetSearchNodes(m_endNode.distanceTraveled.ToString());
 
                         //Ausgabe: wie lang ist der gefundene Weg
                         Debug.Log("Der Suchalgorithmus: " + mode.ToString() + " fand einen Weg der länge: " + m_endNode.distanceTraveled.ToString());
@@ -209,7 +210,7 @@ public class Pathfinder : MonoBehaviour
                 }
 
                 //gesamte Visualisierung nur Anzeigen wenn gewollt
-                if (showIterations)
+                if (ingameOptionsMenu.GetShowIterations())
                 {
                     //Visualisierungen verwalten
                     ShowVisualization();
@@ -228,6 +229,9 @@ public class Pathfinder : MonoBehaviour
         //Anzeigefehler vermeiden
         ShowVisualization();
 
+        //Ausgabe: UserInterface
+        ingameInfos.SetSearchTime((Time.time - timeStart).ToString("0.##"));
+
         //Ausgabe: Ende der Zeitmessung für die Anzeige
         Debug.Log("Zeit bis zur Terminierung = " + (Time.time - timeStart).ToString() + " Sekunden");
     }
@@ -236,7 +240,7 @@ public class Pathfinder : MonoBehaviour
     private void ShowVisualization()
     {
         //Färbung nur Anzeigen wenn gewollt
-        if (showColor)
+        if (ingameOptionsMenu.GetShowColor())
         {
             //Färben der Knoten
             ShowColors();

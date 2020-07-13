@@ -57,10 +57,4 @@ public class GameController : MonoBehaviour
     {
         StartCoroutine(pathfinder.SearchRoutine(timeStep));
     }
-
-    //Button Reset
-    public void ResetMapArea()
-    {
-
-    }
 }

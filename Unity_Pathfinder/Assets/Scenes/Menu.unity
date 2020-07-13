@@ -189,9 +189,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -30, y: 1229.352}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0.20662025}
+  m_SizeDelta: {x: 1236, y: 643.47327}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &65229142
 GameObject:
@@ -790,9 +790,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -30.000011, y: 3151.699}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1235, y: 3999.8408}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &99221751
 GameObject:
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 452655347}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.24828893
+  m_Size: 0.1956408
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2127,7 +2127,7 @@ RectTransform:
   m_Father: {fileID: 191311386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.36345977}
+  m_AnchorMin: {x: 0, y: 0.41533715}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -2201,8 +2201,8 @@ RectTransform:
   m_Father: {fileID: 746559634}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.36345977}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.47503063}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 619614813}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9998268
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3006,7 +3006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Breitensuche
+  m_text: Breadth-first search
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -3076,10 +3076,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 448136947}
-    characterCount: 12
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -3139,7 +3139,7 @@ RectTransform:
   m_Father: {fileID: 415521496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7517111}
+  m_AnchorMin: {x: 0, y: 0.8043592}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -3896,7 +3896,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.9998268, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3936,6 +3936,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619614812}
+  m_CullTransparentMesh: 0
+--- !u!1 &658173919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658173920}
+  - component: {fileID: 658173922}
+  - component: {fileID: 658173921}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [LiberationSans SDF Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &658173920
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658173919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 905701143}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &658173921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658173919}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 8.5625
+  m_canvasRenderer: {fileID: 658173922}
+  m_TextComponent: {fileID: 905701144}
+  m_materialReferenceIndex: 1
+--- !u!222 &658173922
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658173919}
   m_CullTransparentMesh: 0
 --- !u!1 &662618121
 GameObject:
@@ -4288,58 +4361,108 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dijkstra Algorithmus:\n\nDer Algorithmus von Dijkstra (nach seinem Erfinder
-    Edsger W. Dijkstra) ist ein Algorithmus aus der Klasse der Greedy-Algorithmen
-    und l\xF6st das Problem der k\xFCrzesten Pfade f\xFCr einen gegebenen Startknoten.
-    Er berechnet somit einen k\xFCrzesten Pfad zwischen dem gegebenen Startknoten
-    und einem der (oder allen) \xFCbrigen Knoten in einem kantengewichteten Graphen
-    (sofern dieser keine Negativkanten enth\xE4lt).\r\n\r\nF\xFCr unzusammenh\xE4ngende
-    ungerichtete Graphen ist der Abstand zu denjenigen Knoten unendlich, zu denen
-    kein Pfad vom Startknoten aus existiert. Dasselbe gilt auch f\xFCr gerichtete
-    nicht stark zusammenh\xE4ngende Graphen.\n\nDie Grundidee des Algorithmus ist
-    es, immer derjenigen Kante zu folgen, die den k\xFCrzesten Streckenabschnitt
-    vom Startknoten aus verspricht. Andere Kanten werden erst dann verfolgt, wenn
-    alle k\xFCrzeren Streckenabschnitte beachtet wurden. Dieses Vorgehen gew\xE4hrleistet,
-    dass bei Erreichen eines Knotens kein k\xFCrzerer Pfad zu ihm existieren kann.
-    Eine einmal berechnete Distanz zwischen dem Startknoten und einem besuchten Knoten
-    wird nicht mehr ge\xE4ndert. Distanzen zu noch nicht abgearbeiteten Knoten k\xF6nnen
-    sich hingegen im Laufe des Algorithmus durchaus ver\xE4ndern, n\xE4mlich verringern.
-    Dieses Vorgehen wird fortgesetzt, bis die Distanz des Zielknotens berechnet wurde
-    (single-pair shortest path) oder die Distanzen aller Knoten zum Startknoten bekannt
-    sind (single-source shortest path).\r\n\r\n\r\nBerechnung der k\xFCrzesten Wege
-    zum linken Knoten\r\nDer Algorithmus l\xE4sst sich durch die folgenden Schritte
-    beschreiben. Es werden sowohl die k\xFCrzesten Wegstrecken als auch deren Knotenfolgen
-    berechnet.\r\n\r\nWeise allen Knoten die beiden Eigenschaften \u201EDistanz\u201C
-    und \u201EVorg\xE4nger\u201C zu. Initialisiere die Distanz im Startknoten mit
-    0 und in allen anderen Knoten mit {\\displaystyle \\infty }\\infty .\r\nSolange
-    es noch unbesuchte Knoten gibt, w\xE4hle darunter denjenigen mit minimaler Distanz
-    aus und\r\nSpeichere, dass dieser Knoten schon besucht wurde.\r\nBerechne f\xFCr
-    alle noch unbesuchten Nachbarknoten die Summe des jeweiligen Kantengewichtes
-    und der Distanz im aktuellen Knoten.\r\nIst dieser Wert f\xFCr einen Knoten kleiner
-    als die dort gespeicherte Distanz, aktualisiere sie und setze den aktuellen Knoten
-    als Vorg\xE4nger.\r\nDieser Schritt wird auch als Update oder Relaxation/Relaxierung
-    bezeichnet.\r\nIn dieser Form berechnet der Algorithmus ausgehend von einem Startknoten
-    die k\xFCrzesten Wege zu allen anderen Knoten. Ist man dagegen nur an dem Weg
-    zu einem ganz bestimmten Knoten interessiert, so kann man in Schritt (2) schon
-    abbrechen, wenn der gesuchte Knoten der aktive ist.\r\n\r\r\nNegative Kantengewichte
-    k\xF6nnen zu nicht-optimalen L\xF6sungen f\xFChren.\r\nAufgrund der Eigenschaft,
-    einmal festgelegte Distanzen zum Startknoten nicht mehr zu ver\xE4ndern, geh\xF6rt
-    der Dijkstra-Algorithmus zu den Greedy-Algorithmen, die in jedem Schritt die
-    momentan aussichtsreichste Teill\xF6sung bevorzugen. Anders als manche andere
-    Greedy-Algorithmen berechnet der Dijkstra-Algorithmus jedoch stets eine optimale
-    L\xF6sung. Diese Eigenschaft basiert auf der Annahme, dass die k\xFCrzesten Teilstrecken
-    zwischen Knoten in einem Pfad zusammen die k\xFCrzeste Strecke auf diesem Pfad
-    bilden. Unter der Voraussetzung positiver Kantengewichte ist die Annahme g\xFCltig,
-    denn f\xE4nde man nachtr\xE4glich einen k\xFCrzeren Weg vom Startknoten zu einem
-    Zielknoten, h\xE4tte man auch dessen k\xFCrzere Teilstrecke fr\xFCher untersuchen
-    m\xFCssen, um den Algorithmus korrekt durchzuf\xFChren. Dann h\xE4tte man aber
-    \xFCber die k\xFCrzere Teilstrecke den Zielknoten fr\xFCher gefunden als auf
-    dem l\xE4ngeren Weg.\r\n\r\nDie Annahme trifft jedoch nicht mehr zu, wenn der
-    Graph negative Kantengewichte enth\xE4lt. Dann kann jede Teilstrecke f\xFCr sich
-    zwar eine k\xFCrzeste Strecke zwischen den Endpunkten sein, man k\xF6nnte jedoch
-    \xFCber einen l\xE4ngeren Teilweg die Gesamtdistanz verbessern, wenn eine negative
-    Kante die Wegl\xE4nge wieder reduziert. Die negative Kante bewirkt aber, dass
-    der untere Pfad k\xFCrzer ist.\n\nQuelle: https://de.wikipedia.org/wiki/Dijkstra-Algorithmus"
+  m_text: "<b>Dijkstra's algorithm:</b>\n\nDijkstra's algorithm (or Dijkstra's Shortest
+    Path First algorithm, SPF algorithm) is an algorithm for finding the shortest
+    paths between nodes in a graph, which may represent, for example, road networks.
+    It was conceived by computer scientist Edsger W. Dijkstra in 1956 and published
+    three years later.\n\r\nThe algorithm exists in many variants. Dijkstra's original
+    algorithm found the shortest path between two given nodes, but a more common
+    variant fixes a single node as the \"source\" node and finds shortest paths from
+    the source to all other nodes in the graph, producing a shortest-path tree.\r\n\r\nFor
+    a given source node in the graph, the algorithm finds the shortest path between
+    that node and every other. It can also be used for finding the shortest paths
+    from a single node to a single destination node by stopping the algorithm once
+    the shortest path to the destination node has been determined. For example, if
+    the nodes of the graph represent cities and edge path costs represent driving
+    distances between pairs of cities connected by a direct road (for simplicity,
+    ignore red lights, stop signs, toll roads and other obstructions), Dijkstra's
+    algorithm can be used to find the shortest route between one city and all other
+    cities. A widely used application of shortest path algorithm is network routing
+    protocols, most notably IS-IS (Intermediate System to Intermediate System) and
+    Open Shortest Path First (OSPF). It is also employed as a subroutine in other
+    algorithms such as Johnson's.\r\n\r\nThe Dijkstra algorithm uses labels that
+    are positive integers or real numbers, which are totally ordered. It can be generalized
+    to use any labels that are partially ordered, provided the subsequent labels
+    (a subsequent label is produced when traversing an edge) are monotonically non-decreasing.
+    This generalization is called the generic Dijkstra shortest-path algorithm.\n\r\nDijkstra's
+    algorithm uses a data structure for storing and querying partial solutions sorted
+    by distance from the start. While the original algorithm uses a min-priority
+    queue and runs in time. The idea of this algorithm is also given in Leyzorek
+    et al. 1957. Fredman & Tarjan 1984 propose using a Fibonacci heap min-priority
+    queue to optimize the running time complexity. This is asymptotically the fastest
+    known single-source shortest-path algorithm for arbitrary directed graphs with
+    unbounded non-negative weights. However, specialized cases (such as bounded/integer
+    weights, directed acyclic graphs etc.) can indeed be improved further as detailed
+    in Specialized variants.\r\n\r\nIn some fields, artificial intelligence in particular,
+    Dijkstra's algorithm or a variant of it is known as uniform cost search and formulated
+    as an instance of the more general idea of best-first search.\n\n<b>Algorithm</b>\n\nLet
+    the node at which we are starting be called the initial node. Let the distance
+    of node Y be the distance from the initial node to Y. Dijkstra's algorithm will
+    assign some initial distance values and will try to improve them step by step.\r\n\r\n<i>1.
+    Mark all nodes unvisited. Create a set of all the unvisited nodes called the
+    unvisited set.\r\n\n2. Assign to every node a tentative distance value: set it
+    to zero for our initial node and to infinity for all other nodes. Set the initial
+    node as current.\r\n\n3. For the current node, consider all of its unvisited
+    neighbours and calculate their tentative distances through the current node.
+    Compare the newly calculated tentative distance to the current assigned value
+    and assign the smaller one. For example, if the current node A is marked with
+    a distance of 6, and the edge connecting it with a neighbour B has length 2,
+    then the distance to B through A will be 6 + 2 = 8. If B was previously marked
+    with a distance greater than 8 then change it to 8. Otherwise, the current value
+    will be kept.\r\n\n4. When we are done considering all of the unvisited neighbours
+    of the current node, mark the current node as visited and remove it from the
+    unvisited set. A visited node will never be checked again.\r\n\n5. If the destination
+    node has been marked visited (when planning a route between two specific nodes)
+    or if the smallest tentative distance among the nodes in the unvisited set is
+    infinity (when planning a complete traversal; occurs when there is no connection
+    between the initial node and remaining unvisited nodes), then stop. The algorithm
+    has finished.\r\n\n6. Otherwise, select the unvisited node that is marked with
+    the smallest tentative distance, set it as the new \"current node\", and go back
+    to step 3.\r</i>\n\nWhen planning a route, it is actually not necessary to wait
+    until the destination node is \"visited\" as above: the algorithm can stop once
+    the destination node has the smallest tentative distance among all \"unvisited\"
+    nodes (and thus could be selected as the next \"current\").\n\n<b>Description</b>\n\nSuppose
+    you would like to find the shortest path between two intersections on a city
+    map: a starting point and a destination. Dijkstra's algorithm initially marks
+    the distance (from the starting point) to every other intersection on the map
+    with infinity. This is done not to imply that there is an infinite distance,
+    but to note that those intersections have not been visited yet. Some variants
+    of this method leave the intersections' distances unlabeled. Now select the current
+    intersection at each iteration. For the first iteration, the current intersection
+    will be the starting point, and the distance to it (the intersection's label)
+    will be zero. For subsequent iterations (after the first), the current intersection
+    will be a closest unvisited intersection to the starting point (this will be
+    easy to find).\r\n\r\nFrom the current intersection, update the distance to every
+    unvisited intersection that is directly connected to it. This is done by determining
+    the sum of the distance between an unvisited intersection and the value of the
+    current intersection and then relabeling the unvisited intersection with this
+    value (the sum) if it is less than the unvisited intersection's current value.
+    In effect, the intersection is relabeled if the path to it through the current
+    intersection is shorter than the previously known paths. To facilitate shortest
+    path identification, in pencil, mark the road with an arrow pointing to the relabeled
+    intersection if you label/relabel it, and erase all others pointing to it. After
+    you have updated the distances to each neighboring intersection, mark the current
+    intersection as visited and select an unvisited intersection with minimal distance
+    (from the starting point) \u2013 or the lowest label\u2014as the current intersection.
+    Intersections marked as visited are labeled with the shortest path from the starting
+    point to it and will not be revisited or returned to.\r\n\r\nContinue this process
+    of updating the neighboring intersections with the shortest distances, marking
+    the current intersection as visited, and moving onto a closest unvisited intersection
+    until you have marked the destination as visited. Once you have marked the destination
+    as visited (as is the case with any visited intersection), you have determined
+    the shortest path to it from the starting point and can trace your way back following
+    the arrows in reverse. In the algorithm's implementations, this is usually done
+    (after the algorithm has reached the destination node) by following the nodes'
+    parents from the destination node up to the starting node; that's why we also
+    keep track of each node's parent.\r\n\r\nThis algorithm makes no attempt of direct
+    \"exploration\" towards the destination as one might expect. Rather, the sole
+    consideration in determining the next \"current\" intersection is its distance
+    from the starting point. This algorithm therefore expands outward from the starting
+    point, interactively considering every node that is closer in terms of shortest
+    path distance until it reaches the destination. When understood in this way,
+    it is clear how the algorithm necessarily finds the shortest path. However, it
+    may also reveal one of the algorithm's weaknesses: its relative slowness in some
+    topologies.\n\n<i>Source: https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm</i>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4408,12 +4531,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 769408503}
-    characterCount: 3985
+    characterCount: 8134
     spriteCount: 0
-    spaceCount: 544
-    wordCount: 541
+    spaceCount: 1311
+    wordCount: 1297
     linkCount: 0
-    lineCount: 71
+    lineCount: 128
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -5460,7 +5583,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 658173920}
   m_Father: {fileID: 97535976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5488,61 +5612,92 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A* Suche:\n\nDer A*-Algorithmus (\u201EA Stern\u201C oder englisch \u201Ea
-    star\u201C, auch A*-Suche) geh\xF6rt zur Klasse der informierten Suchalgorithmen.
-    Er dient in der Informatik der Berechnung eines k\xFCrzesten Pfades zwischen
-    zwei Knoten in einem Graphen mit positiven Kantengewichten. Er wurde das erste
-    Mal 1968 von Peter Hart, Nils J. Nilsson und Bertram Raphael beschrieben. Der
-    Algorithmus gilt als Verallgemeinerung und Erweiterung des Dijkstra-Algorithmus,
-    in vielen F\xE4llen kann aber umgekehrt A* auch auf Dijkstra reduziert werden.\r\n\r\nIm
-    Gegensatz zu uninformierten Suchalgorithmen verwendet der A*-Algorithmus eine
-    Sch\xE4tzfunktion (Heuristik), um zielgerichtet zu suchen und damit die Laufzeit
-    zu verringern. Der Algorithmus ist vollst\xE4ndig und optimal. Das hei\xDFt,
-    dass immer eine optimale L\xF6sung gefunden wird, falls eine existiert.\n\nFunktionsweise:\nDie
-    Knoten werden w\xE4hrend der Suche in drei verschiedene Klassen eingeteilt:\r\n\r\nunbekannte
-    Knoten: Diese Knoten wurden w\xE4hrend der Suche noch nicht gefunden. Zu ihnen
-    ist noch kein Weg bekannt. Jeder Knoten (au\xDFer dem Startknoten) ist zu Beginn
-    des Algorithmus unbekannt.\r\nbekannte Knoten: Zu diesen Knoten ist ein (m\xF6glicherweise
-    suboptimaler) Weg bekannt. Alle bekannten Knoten werden zusammen mit ihrem {\\displaystyle
-    f}f-Wert in der sogenannten Open List gespeichert. Aus dieser Liste wird immer
-    der vielversprechendste Knoten ausgew\xE4hlt und untersucht. Die Implementierung
-    der Open List hat gro\xDFen Einfluss auf die Laufzeit und wird oft als einfache
-    Priorit\xE4tswarteschlange (z. B. bin\xE4rer Heap) realisiert. Zu Beginn ist
-    nur der Startknoten bekannt.\r\nabschlie\xDFend untersuchte Knoten: Zu diesen
-    Knoten ist der k\xFCrzeste Weg bekannt. Die abschlie\xDFend untersuchten Knoten
-    werden in der sogenannten Closed List gespeichert, damit sie nicht mehrfach untersucht
-    werden. Um effizient entscheiden zu k\xF6nnen, ob sich ein Element auf der Closed
-    List befindet, wird diese oft als Menge implementiert. Die Closed List ist zu
-    Beginn leer.\r\nJeder bekannte oder abschlie\xDFend besuchte Knoten enth\xE4lt
-    einen Zeiger auf seinen (bisher besten) Vorg\xE4ngerknoten. Mit Hilfe dieser
-    Zeiger kann der Pfad bis zum Startknoten r\xFCckverfolgt werden.\r\n\r\nWird
-    ein Knoten {\\displaystyle x}x abschlie\xDFend untersucht (auch expandiert oder
-    relaxiert), so werden seine Nachfolgeknoten in die Open List eingef\xFCgt und
-    {\\displaystyle x}x in die Closed List aufgenommen. F\xFCr neu eingef\xFCgte
-    Nachfolgeknoten werden die Vorg\xE4ngerzeiger auf {\\displaystyle x}x gesetzt.
-    Ist ein Nachfolgeknoten bereits auf der Closed List, so wird er nicht erneut
-    in die Open List eingef\xFCgt und auch sein Vorg\xE4ngerzeiger nicht ge\xE4ndert.
-    Ist ein Nachfolgeknoten bereits auf der Open List, so wird der Knoten nur aktualisiert
-    ({\\displaystyle f}f-Wert und Vorg\xE4ngerzeiger), wenn der neue Weg dorthin
-    k\xFCrzer ist als der bisherige.\r\n\r\nFalls der Zielknoten abschlie\xDFend
-    untersucht wird, terminiert der Algorithmus. Der gefundene Weg wird mit Hilfe
-    der Vorg\xE4ngerzeiger rekonstruiert und ausgegeben. Falls die Open List leer
-    ist, gibt es keine Knoten mehr, die untersucht werden k\xF6nnten. In diesem Fall
-    terminiert der Algorithmus, da es keine L\xF6sung gibt.\r\n\r\nBedingt durch
-    die Vorg\xE4ngerzeiger wird der gefundene Weg vom Ziel ausgehend r\xFCckw\xE4rts
-    bis zum Start ausgegeben. Um den Weg in der richtigen Reihenfolge zu erhalten,
-    kann z. B. vor der Wegsuche Start und Ziel vertauscht werden. Somit wird vom
-    eigentlichen Ziel zum Start gesucht und die Wegausgabe beginnt beim urspr\xFCnglichen
-    Startknoten.\r\n\r\nAnmerkung: Die Closed List kann auch indirekt implementiert
-    werden. Dazu speichern auch die abschlie\xDFend untersuchten Knoten ihren {\\displaystyle
-    f}f-Wert. Wird nun ein abschlie\xDFend untersuchter Knoten erneut gefunden, ist
-    sein alter {\\displaystyle f}f-Wert geringer als der neue, da der k\xFCrzeste
-    Weg zu diesem Knoten bereits gefunden wurde. Der Knoten wird also nicht erneut
-    in die Open List eingef\xFCgt.\r\nWird keine Closed List benutzt, muss anderweitig
-    sichergestellt werden, dass Knoten nicht mehrfach untersucht werden. Ansonsten
-    wird die worst-case Laufzeit schlechter als quadratisch. Au\xDFerdem terminiert
-    der Algorithmus nicht mehr, wenn es keine L\xF6sung gibt. Die Knoten werden dann
-    unendlich oft untersucht, da die Open List nie leer wird.\n\nQuelle: https://de.wikipedia.org/wiki/A*-Algorithmus"
+  m_text: "<b>A* search algorithm:</b>\n\nA* (pronounced \"A-star\") is a graph traversal
+    and path search algorithm, which is often used in many fields of computer science
+    due to its completeness, optimality, and optimal efficiency. One major practical
+    drawback is its space complexity, as it stores all generated nodes in memory.
+    Thus, in practical travel-routing systems, it is generally outperformed by algorithms
+    which can pre-process the graph to attain better performance, as well as memory-bounded
+    approaches; however, A* is still the best solution in many cases.\n\r\nPeter
+    Hart, Nils Nilsson and Bertram Raphael of Stanford Research Institute (now SRI
+    International) first published the algorithm in 1968. It can be seen as an extension
+    of Edsger Dijkstra's 1959 algorithm. A* achieves better performance by using
+    heuristics to guide its search.\n\n<b>Description:</b>\n\nA* is an informed search
+    algorithm, or a best-first search, meaning that it is formulated in terms of
+    weighted graphs: starting from a specific starting node of a graph, it aims to
+    find a path to the given goal node having the smallest cost (least distance travelled,
+    shortest time, etc.). It does this by maintaining a tree of paths originating
+    at the start node and extending those paths one edge at a time until its termination
+    criterion is satisfied.\r\n\r\nAt each iteration of its main loop, A* needs to
+    determine which of its paths to extend. It does so based on the cost of the path
+    and an estimate of the cost required to extend\nthe path all the way to the goal.
+    Specifically, A* selects the path that minimizes\r \nwhere n is the next node
+    on the path, g(n) is the cost of the path from the start node to n, and h(n)
+    is a heuristic function that estimates the cost of the cheapest path from n to
+    the goal. A* terminates when the path it chooses to extend is a path from start
+    to goal or if there are no paths eligible to be extended. The heuristic function
+    is problem-specific. If the heuristic function is admissible, meaning that it
+    never overestimates the actual cost to get to the goal, A* is guaranteed to return
+    a least-cost path from start to goal.\r\n\r\nTypical implementations of A* use
+    a priority queue to perform the repeated selection of minimum (estimated) cost
+    nodes to expand. This priority queue is known as the open set or fringe. At each
+    step of the algorithm, the node with the lowest f(x) value is removed from the
+    queue, the f and g values of its neighbors are updated accordingly, and these
+    neighbors are added to the queue. The algorithm continues until a goal node has
+    a lower f value than any node in the queue (or until the queue is empty). The
+    f value of the goal is then the cost of the shortest path, since h at the goal
+    is zero in an admissible heuristic.\r\n\r\nThe algorithm described so far gives
+    us only the length of the shortest path. To find the actual sequence of steps,
+    the algorithm can be easily revised so that each node on the path keeps track
+    of its predecessor. After this algorithm is run, the ending node will point to
+    its predecessor, and so on, until some node's predecessor is the start node.\r\n\r\nAs
+    an example, when searching for the shortest route on a map, h(x) might represent
+    the straight-line distance to the goal, since that is physically the smallest
+    possible distance between any two points. For a grid map from a video game, using
+    the Manhattan distance or the octile distance becomes better depending on the
+    set of movements available (4-way or 8-way).\r\n\r\nIf the heuristic h satisfies
+    the additional condition h(x) \u2264 d(x, y) + h(y) for every edge (x, y) of
+    the graph (where d denotes the length of that edge), then h is called monotone,
+    or consistent. With a consistent heuristic, A* is guaranteed to find an optimal
+    path without processing any node more than once and A* is equivalent to running
+    Dijkstra's algorithm with the reduced cost d'(x, y) = d(x, y) + h(y) \u2212 h(x).\n\n<b>Properties:</b>\n\n<b>Termination
+    and Completeness\r</b>\nOn finite graphs with non-negative edge weights A* is
+    guaranteed to terminate and is complete, i.e. it will always find a solution
+    (a path from start to goal) if one exists. On infinite graphs with a finite branching
+    factor and edge costs that are bounded away from zero, A* is guaranteed to terminate
+    only if there exists a solution.\r\n\r\n<b>Admissibility\r</b>\nA search algorithm
+    is said to be admissible if it is guaranteed to return an optimal solution. If
+    the heuristic function used by A* is admissible, then A* is admissible. An intuitive
+    \u2033proof\u2033 of this is as follows:\r\n\r\nWhen A* terminates its search,
+    it has found a path from start to goal whose actual cost is lower than the estimated
+    cost of any path from start to goal through any open node. When the heuristic
+    is admissible, those estimates are optimistic (not quite\u2014see the next paragraph),
+    so A* can safely ignore those nodes because they cannot possibly lead to a cheaper
+    solution than the one it already has. In other words, A* will never overlook
+    the possibility of a lower-cost path from start to goal and so it will continue
+    to search until no such possibilities exist.\r\n\r\nThe actual proof is a bit
+    more involved because the f values of open nodes are not guaranteed to be optimistic
+    even if the heuristic is admissible. This is because the g values of open nodes
+    are not guaranteed to be optimal, so the sum is not guaranteed to be optimistic.\r\n\r\n<b>Optimal
+    efficiency\r</b>\nAlgorithm A is optimally efficient with respect to a set of
+    alternative algorithms Alts on a set of problems P if for every problem P in
+    P and every algorithm A\u2032 in Alts, the set of nodes expanded by A in solving
+    P is a subset (possibly equal) of the set of nodes expanded by A\u2032 in solving
+    P. The definitive study of the optimal efficiency of A* is due to Rina Dechter
+    and Judea Pearl. They considered a variety of definitions of Alts and P in combination
+    with A*'s heuristic being merely admissible or being both consistent and admissible.
+    The most interesting positive result they proved is that A*, with a consistent
+    heuristic, is optimally efficient with respect to all admissible A*-like search
+    algorithms on all \u2033non-pathological\u2033 search problems. Roughly speaking,
+    their notion of non-pathological problem is what we now mean by \u2033up to tie-breaking\u2033.
+    This result does not hold if A*'s heuristic is admissible but not consistent.
+    In that case, Dechter and Pearl showed there exist admissible A*-like algorithms
+    that can expand arbitrarily fewer nodes than A* on some non-pathological problems.\r\n\r\nOptimal
+    efficiency is about the set of nodes expanded, not the number of node expansions
+    (the number of iterations of A*'s main loop). When the heuristic being used is
+    admissible but not consistent, it is possible for a node to be expanded by A*
+    many times, an exponential number of times in the worst case. In such circumstances
+    Dijkstra's algorithm could outperform A* by a large margin.\n\n<i>Source: https://en.wikipedia.org/wiki/A*_search_algorithm</i>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5587,7 +5742,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 6843
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5611,21 +5766,21 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 905701144}
-    characterCount: 4271
+    characterCount: 6900
     spriteCount: 0
-    spaceCount: 604
-    wordCount: 612
+    spaceCount: 1201
+    wordCount: 1204
     linkCount: 0
-    lineCount: 76
+    lineCount: 109
     pageCount: 1
-    materialCount: 1
+    materialCount: 2
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 658173921}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -5880,9 +6035,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -30, y: 900}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1197.7285, y: 1916.303}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &948896815
 GameObject:
@@ -5943,7 +6098,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0.11764706}
@@ -5992,13 +6147,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6196,8 +6351,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1731799865}
   m_HandleRect: {fileID: 1731799864}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.63654023
+  m_Value: 0.98659986
+  m_Size: 0.47827658
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6271,9 +6426,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -30, y: 1229.352}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 11.438598}
+  m_SizeDelta: {x: 1235, y: 1636.1495}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1025862796
 GameObject:
@@ -6432,7 +6587,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 261768733}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.63654023
+  m_Size: 0.58466285
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7710,7 +7865,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1220164407}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.26439494
+  m_Size: 0.1657467
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7981,8 +8136,8 @@ RectTransform:
   m_Father: {fileID: 1971776013}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.13051991}
-  m_AnchorMax: {x: 1, y: 0.99999994}
+  m_AnchorMin: {x: 0, y: 0.5916449}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8055,7 +8210,7 @@ RectTransform:
   m_Father: {fileID: 201083934}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.73560506}
+  m_AnchorMin: {x: 0, y: 0.8342533}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -8189,26 +8344,41 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tiefensuche:\n\nTiefensuche (englisch depth-first search, DFS) ist in
-    der Informatik ein Verfahren zum Suchen von Knoten in einem Graphen. Sie z\xE4hlt
-    zu den uninformierten Suchalgorithmen. Im Gegensatz zur Breitensuche wird bei
-    der Tiefensuche zun\xE4chst ein Pfad vollst\xE4ndig in die Tiefe beschritten,
-    bevor abzweigende Pfade beschritten werden. Dabei sollen alle erreichbaren Knoten
-    des Graphen besucht werden. F\xFCr Graphen mit potentiell wenigen, langen Pfaden
-    bietet sich die beschr\xE4nkte Tiefensuche an, bei der jeder Pfad nur bis zu
-    einer bestimmten Tiefe beschritten wird.\r\n\r\nDie Kanten des Graphen, die vom
-    Algorithmus zum Durchlaufen des Graphen benutzt werden, werden als Baumkanten
-    bezeichnet. Diejenigen Kanten, die nicht benutzt werden und von einem Knoten
-    zu einem anderen Knoten im selben Teilbaum f\xFChren, der bei der Tiefensuche
-    sp\xE4ter besucht wird, hei\xDFen Vorw\xE4rtskanten. Diejenigen Kanten, die nicht
-    benutzt werden und von einem Knoten zu einem anderen Knoten im selben Teilbaum
-    f\xFChren, der bei der Tiefensuche bereits vorher besucht wurde, hei\xDFen R\xFCckw\xE4rtskanten.
-    Diejenigen Kanten, die \u201Equer\u201C von einem Teilbaum zu einem anderen Teilbaum
-    verlaufen, hei\xDFen Querkanten. Innerhalb des Tiefensuchbaums w\xFCrde der Pfad
-    zwischen zwei \xFCber eine Querkante verbundenen Knoten zun\xE4chst ein Auf-
-    und dann ein Absteigen im Baum erfordern. Vorw\xE4rtskanten, R\xFCckw\xE4rtskanten,
-    Querkanten und Baumkanten ergeben insgesamt die Kantenmenge des Graphen.\n\nQuelle:
-    https://de.wikipedia.org/wiki/Tiefensuche"
+  m_text: "<b>Depth-first search:</b>\n\nDepth-first search (DFS) is an algorithm
+    for traversing or searching tree or graph data structures. The algorithm starts
+    at the root node (selecting some arbitrary node as the root node in the case
+    of a graph) and explores as far as possible along each branch before backtracking.\r\n\r\nA
+    version of depth-first search was investigated in the 19th century by French
+    mathematician Charles Pierre Tr\xE9maux as a strategy for solving mazes.\n\n<b>Properties</b>\n\nThe
+    time and space analysis of DFS differs according to its application area. In
+    theoretical computer science, DFS is typically used to traverse an entire graph,
+    and takes time linear in the size of the graph. In these applications it also
+    uses space in the worst case to store the stack of vertices on the current search
+    path as well as the set of already-visited vertices. Thus, in this setting, the
+    time and space bounds are the same as for breadth-first search and the choice
+    of which of these two algorithms to use depends less on their complexity and
+    more on the different properties of the vertex orderings the two algorithms produce.\r\n\r\nFor
+    applications of DFS in relation to specific domains, such as searching for solutions
+    in artificial intelligence or web-crawling, the graph to be traversed is often
+    either too large to visit in its entirety or infinite (DFS may suffer from non-termination).
+    In such cases, search is only performed to a limited depth; due to limited resources,
+    such as memory or disk space, one typically does not use data structures to keep
+    track of the set of all previously visited vertices. When search is performed
+    to a limited depth, the time is still linear in terms of the number of expanded
+    vertices and edges (although this number is not the same as the size of the entire
+    graph because some vertices may be searched more than once and others not at
+    all) but the space complexity of this variant of DFS is only proportional to
+    the depth limit, and as a result, is much smaller than the space needed for searching
+    to the same depth using breadth-first search. For such applications, DFS also
+    lends itself much better to heuristic methods for choosing a likely-looking branch.
+    When an appropriate depth limit is not known a priori, iterative deepening depth-first
+    search applies DFS repeatedly with a sequence of increasing limits. In the artificial
+    intelligence mode of analysis, with a branching factor greater than one, iterative
+    deepening increases the running time by only a constant factor over the case
+    in which the correct depth limit is known due to the geometric growth of the
+    number of nodes per level.\r\n\r\nDFS may also be used to collect a sample of
+    graph nodes. However, incomplete DFS, similarly to incomplete BFS, is biased
+    towards nodes of high degree.\n\n<i>Source: https://en.wikipedia.org/wiki/Depth-first_search</i>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8277,12 +8447,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1251614200}
-    characterCount: 1494
+    characterCount: 2831
     spriteCount: 0
-    spaceCount: 204
-    wordCount: 207
+    spaceCount: 474
+    wordCount: 474
     linkCount: 0
-    lineCount: 26
+    lineCount: 44
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -8741,8 +8911,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1218442449}
   m_HandleRect: {fileID: 1218442448}
   m_Direction: 2
-  m_Value: 0.99999946
-  m_Size: 0.86948
+  m_Value: 1
+  m_Size: 0.4083551
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8840,7 +9010,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bestensuche
+  m_text: Best-first search
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -8910,10 +9080,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1377470480}
-    characterCount: 11
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -9656,22 +9826,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Breitensuche:\n\nBreitensuche (englisch breadth-first search, BFS) ist
-    ein Verfahren in der Informatik zum Durchsuchen bzw. Durchlaufen der Knoten eines
-    Graphen. Sie z\xE4hlt zu den uninformierten Suchalgorithmen. Im Gegensatz zur
-    Tiefensuche werden zun\xE4chst alle Knoten beschritten, die vom Ausgangsknoten
-    direkt erreichbar sind. Erst danach werden Folgeknoten beschritten.\n\nArbeitsweise:\n\nDie
-    Breitensuche ist eine uninformierte Suche, welche durch Expansion der einzelnen
-    Level der Graphen ausgehend vom Startknoten den Graph in die Breite nach einem
-    Element durchsucht.\r\n\r\nZuerst wird ein Startknoten u ausgew\xE4hlt. Von diesem
-    Knoten aus wird nun jede Kante betrachtet und getestet, ob der gegen\xFCberliegende
-    Knoten v schon entdeckt wurde bzw. das gesuchte Element ist. Ist dies noch nicht
-    der Fall, so wird der entsprechende Knoten in einer Warteschlange gespeichert
-    und im n\xE4chsten Schritt bearbeitet. Hierbei ist zu beachten, dass Breitensuche
-    immer zuerst alle Knoten der gleichen Ebene bearbeitet, und nicht wie die Tiefensuche
-    einem Pfad in die Tiefe folgt. Nachdem alle Kanten des Ausgangsknotens betrachtet
-    wurden, wird der erste Knoten der Warteschlange entnommen und das Verfahren wiederholt.\n\nQuelle:
-    https://de.wikipedia.org/wiki/Breitensuche"
+  m_text: "<b>Breadth-first search:</b>\n\nBreadth-first search (BFS) is an algorithm
+    for traversing or searching tree or graph data structures. It starts at the tree
+    root (or some arbitrary node of a graph, sometimes referred to as a 'search key'),
+    and explores all of the neighbor nodes at the present depth prior to moving on
+    to the nodes at the next depth level.\r\n\r\nIt uses the opposite strategy as
+    depth-first search, which instead explores the node branch as far as possible
+    before being forced to backtrack and expand other nodes.\n\r\nBFS and its application
+    in finding connected components of graphs were invented in 1945 by Konrad Zuse,
+    in his (rejected) Ph.D. thesis on the Plankalk\xFCl programming language, but
+    this was not published until 1972. It was reinvented in 1959 by Edward F. Moore,
+    who used it to find the shortest path out of a maze, and later developed by C.
+    Y. Lee into a wire routing algorithm (published 1961).\n\n<i>Source: https://en.wikipedia.org/wiki/Breadth-first_search</i>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9740,12 +9906,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1545857726}
-    characterCount: 1251
+    characterCount: 974
     spriteCount: 0
-    spaceCount: 172
-    wordCount: 173
+    spaceCount: 162
+    wordCount: 165
     linkCount: 0
-    lineCount: 25
+    lineCount: 17
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -10593,25 +10759,40 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Suchverfahren:\n\nDie Informatik bezeichnet mit Suchverfahren oder Suchalgorithmus
-    einen Algorithmus, der in einem Suchraum nach Mustern oder Objekten mit bestimmten
-    Eigenschaften sucht. Man unterscheidet einfache und heuristische Suchalgorithmen.
-    Einfache Suchalgorithmen benutzen intuitive Methoden f\xFCr das Durchsuchen des
-    Suchraumes, w\xE4hrend heuristische Suchalgorithmen Wissen \xFCber den Suchraum
-    (beispielsweise die Datenverteilung) miteinbeziehen, um die ben\xF6tigte Suchzeit
-    zu reduzieren.\r\n\r\nDie L\xF6sung eines algorithmischen Problems kann allgemein
-    als Suche nach der L\xF6sung in einer Menge von m\xF6glichen L\xF6sungen (dem
-    L\xF6sungsraum) verstanden werden. Als L\xF6sung kann der Zielzustand gelten,
-    aber auch der Pfad zum Ziel oder die Reihenfolge von entsprechenden Aktionen.
-    Ist der Suchraum endlich, kann die Suche mit einer geeigneten Suchstrategie immer
-    zu einem Ergebnis f\xFChren. Bei unendlichen (L\xF6sungs-)Mengen muss die Suche
-    nach gewissen Kriterien (z. B. nach einer bestimmten Zeit) abgebrochen werden.\r\n\r\nWiederholte
-    Suche in einer endlichen Menge kann dadurch effizient gestaltet werden, dass
-    \xFCber den Daten eine Indexstruktur (z. B. in Form eines Suchbaums) erstellt
-    wird, die nach einem bestimmten Kriterium sortiert ist. Dann m\xFCssen bei einer
-    Suche nicht mehr alle Eintr\xE4ge betrachtet werden (z. B. beginnt man die Suche
-    in einem Telefonbuch bei dem Buchstaben, mit dem der Name anf\xE4ngt).\n\n<i>Quelle:
-    https://de.wikipedia.org/wiki/Suchverfahren</i>\n"
+  m_text: "<b>Search algorithms:</b>\n\nIn computer science, a search algorithm is
+    any algorithm which solves the search problem, namely, to retrieve information
+    stored within some data structure, or calculated in the search space of a problem
+    domain, either with discrete or continuous values. Specific applications of search
+    algorithms include:\r\n\r\nProblems in combinatorial optimization, such as:\r\n\n<i>\tThe
+    vehicle routing problem, a form of shortest path problem\r\n\n\tThe nurse scheduling
+    problem\r</i>\n\nProblems in constraint satisfaction, such as:\r\n\n<i>\tThe
+    map coloring problem\r\n\n\tFilling in a sudoku or crossword puzzle\r</i>\n\n\nThe
+    classic search problems described above and web search are both problems in information
+    retrieval, but are generally studied as separate subfields and are solved and
+    evaluated differently. Web search problems are generally focused on filtering
+    and finding documents that are most relevant to human queries. Classic search
+    algorithms are typically evaluated on how fast they can find a solution, and
+    whether that solution is guaranteed to be optimal. Though information retrieval
+    algorithms must be fast, the quality of ranking is more important, as is whether
+    good results have been left out and bad results included.\r\n\r\nThe appropriate
+    search algorithm often depends on the data structure being searched, and may
+    also include prior knowledge about the data. Some database structures are specially
+    constructed to make search algorithms faster or more efficient, such as a search
+    tree, hash map, or a database index.\n\r\nSearch algorithms can be classified
+    based on their mechanism of searching. Linear search algorithms check every record
+    for the one associated with a target key in a linear fashion. Binary, or half
+    interval searches, repeatedly target the center of the search structure and divide
+    the search space in half. Comparison search algorithms improve on linear searching
+    by successively eliminating records based on comparisons of the keys until the
+    target record is found, and can be applied on data structures with a defined
+    order. Digital search algorithms work based on the properties of digits in data
+    structures that use numerical keys. Finally, hashing directly maps keys to records
+    based on a hash function. Searches outside a linear search require that the data
+    be sorted in some way.\r\n\r\nAlgorithms are often evaluated by their computational
+    complexity, or maximum theoretical run time. Binary search functions, for example,
+    have a maximum complexity of O(log n), or logarithmic time. This means that the
+    maximum number of operations needed to find the search target is a logarithmic
+    function of the size of the search space.\n\n<i>Source: https://en.wikipedia.org/wiki/Search_algorithm</i>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10680,12 +10861,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1718066709}
-    characterCount: 1449
+    characterCount: 2701
     spriteCount: 0
-    spaceCount: 194
-    wordCount: 196
+    spaceCount: 423
+    wordCount: 414
     linkCount: 0
-    lineCount: 24
+    lineCount: 52
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -10743,8 +10924,8 @@ RectTransform:
   m_Father: {fileID: 684832911}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.36345977}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.51473224}
+  m_AnchorMax: {x: 1, y: 0.99300885}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10974,8 +11155,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 262902383}
   m_HandleRect: {fileID: 262902382}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.63654023
+  m_Value: 0
+  m_Size: 0.47503063
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11073,7 +11254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suchverfahren
+  m_text: Search algorithm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -11143,10 +11324,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1773065298}
-    characterCount: 13
+    characterCount: 16
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -12728,7 +12909,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.99998647, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12825,7 +13006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dijkstra Algorithmus
+  m_text: Dijkstra's algorithm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -12958,9 +13139,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -29.999866, y: 2959.709}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1235.0001, y: 4721.2524}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1942661578
 GameObject:
@@ -13142,18 +13323,64 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bestensuche:\n\nBestensuche (engl. best-first search) ist ein Algorithmus
-    zum Durchsuchen eines Graphen, bei dem in jeder Iteration der vielversprechendste
-    Knoten gew\xE4hlt wird, bewertet nach einer gewissen Heuristik. Damit z\xE4hlt
-    er zu den informierten Such-Algorithmen.\r\n\r\nJudea Pearl beschrieb die Bestensuche
-    als das Absch\xE4tzen der Kosten eines Knotens n nach einer \"heuristischen Bewertungsfunktion,
-    die im Allgemeinen abh\xE4ngig von der Beschreibung von n ist, der Beschreibung
-    des Ziels, den vom Algorithmus bis zu diesem Zeitpunkt gesammelten Informationen
-    und vor allem vom Zusatzwissen \xFCber die Problemdom\xE4ne selbst.\"\n\r\nUm
-    den vielversprechendsten Folgeknoten zu bestimmen, wird in konkreten Implementierungen
-    oftmals eine Vorrangwarteschlange verwendet.\r\n\r\nEin bekanntes Beispiel f\xFCr
-    die Bestensuche ist der A*-Algorithmus. Zur Wegfindung wird Bestensuche auch
-    oftmals in der kombinatorischen Optimierung eingesetzt.\n\nQuelle: https://de.wikipedia.org/wiki/Bestensuche"
+  m_text: '<b>Best-first search:</b>
+
+
+    Best-first search is a search algorithm
+    which explores a graph by expanding the most promising node chosen according
+    to a specified rule.
+
+    
+
+    Judea Pearl described best-first search as
+    estimating the promise of node n by a "heuristic evaluation function which, in
+    general, may depend on the description of n, the description of the goal, the
+    information gathered by the search up to that point, and most important, on any
+    extra knowledge about the problem domain."
+
+    
+
+    Some authors have used
+    "best-first search" to refer specifically to a search with a heuristic that attempts
+    to predict how close the end of a path is to a solution, so that paths which
+    are judged to be closer to a solution are extended first. This specific type
+    of search is called greedy best-first search or pure heuristic search.
+
+    
+
+    Efficient
+    selection of the current best candidate for extension is typically implemented
+    using a priority queue.
+
+    
+
+    The A* search algorithm is an example of
+    a best-first search algorithm, as is B*. Best-first algorithms are often used
+    for path finding in combinatorial search. Neither A* nor B* is a greedy best-first
+    search, as they incorporate the distance from the start in addition to estimated
+    distances to the goal.
+
+
+    <b>Greedy Best-first search</b>
+
+
+    Using a greedy
+    algorithm, expand the first successor of the parent. After a successor is generated:
+
+    
+
+    <i>1.
+    If the successor''s heuristic is better than its parent, the successor is set
+    at the front of the queue (with the parent reinserted directly behind it), and
+    the loop restarts.
+
+
+    2. Else, the successor is inserted into the queue (in
+    a location determined by its heuristic value). The procedure will evaluate the
+    remaining successors (if any) of the parent.</i>
+
+
+    <i>Source: https://en.wikipedia.org/wiki/Best-first_search</i>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13222,12 +13449,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1965661849}
-    characterCount: 972
+    characterCount: 1786
     spriteCount: 0
-    spaceCount: 123
-    wordCount: 125
+    spaceCount: 293
+    wordCount: 290
     linkCount: 0
-    lineCount: 21
+    lineCount: 36
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -13285,9 +13512,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -30, y: 1229.352}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1235, y: 1338.4329}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1971776012
 GameObject:
@@ -13611,7 +13838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A* Suche
+  m_text: A* search algorithm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -13681,10 +13908,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2041466497}
-    characterCount: 8
+    characterCount: 19
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -14085,7 +14312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tiefensuche
+  m_text: Depth-first search
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56fe546bebd1b304f973af1d8c61b804, type: 2}
   m_sharedMaterial: {fileID: 4962487990414074684, guid: 56fe546bebd1b304f973af1d8c61b804,
@@ -14155,10 +14382,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2142193468}
-    characterCount: 11
+    characterCount: 18
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -14268,7 +14495,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1896710944}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99998647
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
