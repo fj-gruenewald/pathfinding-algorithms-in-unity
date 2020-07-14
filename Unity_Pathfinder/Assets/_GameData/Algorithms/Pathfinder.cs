@@ -37,20 +37,7 @@ public class Pathfinder : MonoBehaviour
     //Suchvariablen
     public bool isComplete = false;
     private int m_iterations = 0;
-
-    //Suchmodus wählen
-    public enum Mode
-    {
-        BreadthFirstSearch = 0,
-        DijkstraAlgorithm = 1,
-        GreedyBestFirstSearch = 2,
-        AStarSearch = 3,
-
-    }
-
-    //Standard Suchmodus
-    public Mode mode = Mode.BreadthFirstSearch;
-
+    
     //Suche durchführen
     public void Init(Graph graph, GraphView graphView, Node start, Node end)
     {
@@ -173,19 +160,19 @@ public class Pathfinder : MonoBehaviour
                 }
 
                 //Durchführen der Suchalgorithmen
-                if (mode == Mode.BreadthFirstSearch)
+                if (ingameOptionsMenu.GetSearchMode() == IngameOptionsMenu.Mode.BreadthFirstSearch)
                 {
                     ExpandFrontierBreadthFirstSearch(currentNode);
                 }
-                else if (mode == Mode.DijkstraAlgorithm)
+                else if (ingameOptionsMenu.GetSearchMode() == IngameOptionsMenu.Mode.DijkstraAlgorithm)
                 {
                     ExpandFrontierDijkstraAlgorithm(currentNode);
                 }
-                else if (mode == Mode.GreedyBestFirstSearch)
+                else if (ingameOptionsMenu.GetSearchMode() == IngameOptionsMenu.Mode.GreedyBestFirstSearch)
                 {
                     ExpandFrontierGreedyBestFirstSearch(currentNode);
                 }
-                else if (mode == Mode.AStarSearch)
+                else if (ingameOptionsMenu.GetSearchMode() == IngameOptionsMenu.Mode.AStarSearch)
                 {
                     ExpandFrontierAStarSearch(currentNode);
                 }
@@ -205,7 +192,7 @@ public class Pathfinder : MonoBehaviour
                         ingameInfos.SetSearchNodes(m_endNode.distanceTraveled.ToString());
 
                         //Ausgabe: wie lang ist der gefundene Weg
-                        Debug.Log("Der Suchalgorithmus: " + mode.ToString() + " fand einen Weg der länge: " + m_endNode.distanceTraveled.ToString());
+                        Debug.Log("Der Suchalgorithmus: " + ingameOptionsMenu.GetSearchMode().ToString() + " fand einen Weg der länge: " + m_endNode.distanceTraveled.ToString());
                     }
                 }
 

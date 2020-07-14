@@ -1,19 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class IngameOptionsMenu : MonoBehaviour
 {
-    //Variablen für UserInterface
+    //Variablen für UserInterface (Toggles)
     public Toggle showIterationsToggle;
     public Toggle showColorToggle;
     public Toggle exitOnGoalToggle;
 
-    //variablen für Pathfinder
+    //Variablen für UserInterface (Slider)
+    public Slider iterationSpeedSlider;
+
+    //Variablen für UserInterface (Dropdown)
+    public TMP_Dropdown algorithmDropdown;
+    public static Mode searchMode = Mode.BreadthFirstSearch;
+    public enum Mode
+    {
+        BreadthFirstSearch = 0,
+        DijkstraAlgorithm = 1,
+        GreedyBestFirstSearch = 2,
+        AStarSearch = 3,
+
+    }
+
+    //Variablen für Pathfinder (Visualisierung)
     public static bool showIterations = true;
     public static bool showColor = true;
     public static bool exitOnGoal = true;
+    
+    //Variablen für GameController (Speed)
+    public static float timeStep;
 
     public bool GetShowIterations()
     {
@@ -29,6 +48,16 @@ public class IngameOptionsMenu : MonoBehaviour
     public bool GetExitOnGoal()
     {
         return exitOnGoal;
+    }
+
+    public float GetTimeStep()
+    {
+        return timeStep;
+    }
+
+    public Mode GetSearchMode()
+    {
+        return searchMode;
     }
 
     //ShowIterations
@@ -80,15 +109,33 @@ public class IngameOptionsMenu : MonoBehaviour
         Debug.Log("Value changed on ExitOnGoalToggle");
     }
 
-    //Iteration Speed
-    public void IterationSpeedSlider()
+    //Update Methode zum prüfen von Slider
+    void Update()
     {
-        Debug.Log("Value changed on IterationSpeedSlider");
-    }
+        //Timestep für Geschwindigkeit von Iterationsschritten
+        timeStep = iterationSpeedSlider.value;
+        Debug.Log(timeStep);
 
-    //Algorithms Dropdown
-    public void AlgorithmsDropdown()
-    {
-
+        //Prüfen des Dropdown für Mode des Algorithmus
+        if (algorithmDropdown.value == 0)
+        {
+            Debug.Log("Mode 0");
+            searchMode = Mode.BreadthFirstSearch;
+        }
+        if (algorithmDropdown.value == 1)
+        {
+            Debug.Log("Mode 1");
+            searchMode = Mode.GreedyBestFirstSearch;
+        }
+        if (algorithmDropdown.value == 2)
+        {
+            Debug.Log("Mode 2");
+            searchMode = Mode.DijkstraAlgorithm;
+        }
+        if (algorithmDropdown.value == 3)
+        {
+            Debug.Log("Mode 3");
+            searchMode = Mode.AStarSearch;
+        }
     }
 }

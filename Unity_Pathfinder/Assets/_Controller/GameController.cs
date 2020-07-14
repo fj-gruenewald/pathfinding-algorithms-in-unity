@@ -5,6 +5,9 @@ public class GameController : MonoBehaviour
     //Referenz zur MapData
     public MapData mapData;
 
+    //Referenz zum IngameMenu
+    public IngameOptionsMenu ingameOptionsMenu;
+
     //Referenz zum Graph
     public Graph graph;
 
@@ -20,9 +23,6 @@ public class GameController : MonoBehaviour
     public int endX = 20;
 
     public int endY = 10;
-
-    //Zeit die ein Schritt benötigt
-    public float timeStep = 0.1f;
 
     private void Start()
     {
@@ -55,6 +55,6 @@ public class GameController : MonoBehaviour
     //Button Start
     public void StartPathfinding()
     {
-        StartCoroutine(pathfinder.SearchRoutine(timeStep));
+        StartCoroutine(pathfinder.SearchRoutine(ingameOptionsMenu.GetTimeStep()));
     }
 }

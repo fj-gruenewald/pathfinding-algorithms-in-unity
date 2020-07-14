@@ -8,6 +8,7 @@ Planned Features:
   - better Text for the Wiki with explanations of each Algorithm
   - the possibility to use several maps
   - the possibility to create your own maps
+  - the posibility to generate maps
   - options to change the start and endpoint
 
 
