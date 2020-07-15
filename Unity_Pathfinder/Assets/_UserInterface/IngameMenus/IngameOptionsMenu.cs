@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +6,7 @@ public class IngameOptionsMenu : MonoBehaviour
 {
     //Variablen für UserInterface (Toggles)
     public Toggle showIterationsToggle;
+
     public Toggle showColorToggle;
     public Toggle exitOnGoalToggle;
 
@@ -16,21 +15,23 @@ public class IngameOptionsMenu : MonoBehaviour
 
     //Variablen für UserInterface (Dropdown)
     public TMP_Dropdown algorithmDropdown;
+
     public static Mode searchMode = Mode.BreadthFirstSearch;
+
     public enum Mode
     {
         BreadthFirstSearch = 0,
         DijkstraAlgorithm = 1,
         GreedyBestFirstSearch = 2,
         AStarSearch = 3,
-
     }
 
     //Variablen für Pathfinder (Visualisierung)
     public static bool showIterations = true;
+
     public static bool showColor = true;
     public static bool exitOnGoal = true;
-    
+
     //Variablen für GameController (Speed)
     public static float timeStep;
 
@@ -42,7 +43,6 @@ public class IngameOptionsMenu : MonoBehaviour
     public bool GetShowColor()
     {
         return showColor;
-
     }
 
     public bool GetExitOnGoal()
@@ -90,7 +90,6 @@ public class IngameOptionsMenu : MonoBehaviour
             showColor = false;
         }
         Debug.Log("Value changed on ShowColorsToggle");
-
     }
 
     //exitOnGoal
@@ -110,7 +109,7 @@ public class IngameOptionsMenu : MonoBehaviour
     }
 
     //Update Methode zum prüfen von Slider
-    void Update()
+    private void Update()
     {
         //Timestep für Geschwindigkeit von Iterationsschritten
         timeStep = iterationSpeedSlider.value;

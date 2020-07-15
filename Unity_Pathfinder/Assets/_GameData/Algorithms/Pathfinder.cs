@@ -2,24 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class Pathfinder : MonoBehaviour
 {
     //Initialisierung von Fremdklassen
     public IngameInfos ingameInfos;
+
     public IngameOptionsMenu ingameOptionsMenu;
 
     //Start und Endpunkt
     private Node m_startNode;
+
     private Node m_endNode;
 
     //Referenzen zu Darstellenden Objekten
     private Graph m_graph;
+
     private GraphView m_graphView;
 
     //Queue abzuarbeitender Knoten / Update: zur PriorityQueue
     private PriorityQueue<Node> m_frontierNodes;
-    
+
     //Bereits besuchte Knoten
     private List<Node> m_exploredNodes;
 
@@ -36,8 +38,9 @@ public class Pathfinder : MonoBehaviour
 
     //Suchvariablen
     public bool isComplete = false;
+
     private int m_iterations = 0;
-    
+
     //Suche durchführen
     public void Init(Graph graph, GraphView graphView, Node start, Node end)
     {

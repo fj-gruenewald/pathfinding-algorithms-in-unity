@@ -1,14 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine;
-using UnityEngine.UI;
-
 
 public class IngameFrame : MonoBehaviour
 {
     //Variablen
     public GameObject optionsMenu;
+
     private int buttonCounter;
 
     //Main Menu
@@ -26,7 +23,6 @@ public class IngameFrame : MonoBehaviour
     //Options
     public void IngameOptionsVisibility()
     {
-
         //1. Klick öffnen 2ter schließt menü
         buttonCounter++;
         if (buttonCounter % 2 == 1)
@@ -37,7 +33,5 @@ public class IngameFrame : MonoBehaviour
         {
             optionsMenu.gameObject.SetActive(true);
         }
-
     }
-
 }

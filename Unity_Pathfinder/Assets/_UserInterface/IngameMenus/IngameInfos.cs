@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class IngameInfos : MonoBehaviour
 {
     //Variablen
     public TextMeshProUGUI timeText;
-    public TextMeshProUGUI nodeText;
 
+    public TextMeshProUGUI nodeText;
 
     //Time in textMeshPro setzten
     public void SetSearchTime(string time)
@@ -26,7 +23,7 @@ public class IngameInfos : MonoBehaviour
             throw;
         }
     }
-    
+
     //Node in textMeshPro setzten
     public void SetSearchNodes(string nodes)
     {

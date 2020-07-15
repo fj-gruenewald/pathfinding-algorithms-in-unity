@@ -1,7 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
-
 
 public class MainMenu : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    
+
     //App beenden
     public void QuitApp()
     {
@@ -22,16 +21,15 @@ public class MainMenu : MonoBehaviour
     }
 
     //Übergange von Scene zu Scene
-    IEnumerator LoadScene(int levelIndex)
+    private IEnumerator LoadScene(int levelIndex)
     {
         //play animation
         transition.SetTrigger("Start");
 
-        //wait 
+        //wait
         yield return new WaitForSeconds(1);
 
         //load scene
         SceneManager.LoadScene(1);
-
     }
 }
