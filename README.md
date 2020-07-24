@@ -23,6 +23,5 @@ Current Features:
   - A* Search
   - Informations about the Algorithms Run
   - A Wiki with Informations about the Algorithms
-  - Informations about the Algorithms Run
 
   
