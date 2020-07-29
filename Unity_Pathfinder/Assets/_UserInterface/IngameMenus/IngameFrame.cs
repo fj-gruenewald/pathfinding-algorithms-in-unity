@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class IngameFrame : MonoBehaviour
 {
     //Variablen
+    //Variables
     public GameObject optionsMenu;
-
     private int buttonCounter;
 
     //Main Menu

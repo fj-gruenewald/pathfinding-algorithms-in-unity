@@ -7,17 +7,21 @@ using UnityEngine;
 public class GraphView : MonoBehaviour
 {
     //tileprefab für Karte
+    //tileprefab for map
     public GameObject nodeViewPrefab;
 
     //array der nodeviews zum färben
+    //array of nodeviews for coloring
     public NodeView[,] nodeViews;
 
     //Farben der Kartenelemente
+    //Colors of the map
     public Color baseColor = Color.grey;
 
     public Color wallColor = Color.black;
 
     //Alles OK mit dem Graph?
+    //Is the Graph OK?
     public void Init(Graph graph)
     {
         if (graph == null)
@@ -57,6 +61,7 @@ public class GraphView : MonoBehaviour
     }
 
     //Färben von Nodes für den Ablauf
+    //Coloring of Nodes for progress
     public void ColorNodes(List<Node> nodes, Color color)
     {
         foreach (Node n in nodes)

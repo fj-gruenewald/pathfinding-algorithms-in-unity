@@ -5,15 +5,18 @@ using UnityEngine.UI;
 public class IngameOptionsMenu : MonoBehaviour
 {
     //Variablen für UserInterface (Toggles)
+    //variables for the user interface toggles
     public Toggle showIterationsToggle;
 
     public Toggle showColorToggle;
     public Toggle exitOnGoalToggle;
 
     //Variablen für UserInterface (Slider)
+    //variables for the user interface slider
     public Slider iterationSpeedSlider;
 
     //Variablen für UserInterface (Dropdown)
+    //variables for the user interface dropdown
     public TMP_Dropdown algorithmDropdown;
 
     public static Mode searchMode = Mode.BreadthFirstSearch;
@@ -27,12 +30,14 @@ public class IngameOptionsMenu : MonoBehaviour
     }
 
     //Variablen für Pathfinder (Visualisierung)
+    //variables for Pathginder visualization
     public static bool showIterations = true;
 
     public static bool showColor = true;
     public static bool exitOnGoal = true;
 
     //Variablen für GameController (Speed)
+    //variables for GameController 
     public static float timeStep;
 
     public bool GetShowIterations()
@@ -109,13 +114,16 @@ public class IngameOptionsMenu : MonoBehaviour
     }
 
     //Update Methode zum prüfen von Slider
+    //update method for slider
     private void Update()
     {
         //Timestep für Geschwindigkeit von Iterationsschritten
+        //timestep for the speed of the search algorithms
         timeStep = iterationSpeedSlider.value;
         Debug.Log(timeStep);
 
         //Prüfen des Dropdown für Mode des Algorithmus
+        //check dropdown for search mode
         if (algorithmDropdown.value == 0)
         {
             Debug.Log("Mode 0");

@@ -5,30 +5,36 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     //Initialisierung von Fremdklassen
+    //Initialize other Classes
     public IngameInfos ingameInfos;
-
     public IngameOptionsMenu ingameOptionsMenu;
 
     //Start und Endpunkt
+    //start and endpoints
     private Node m_startNode;
 
     private Node m_endNode;
 
     //Referenzen zu Darstellenden Objekten
+    //reference objects to show
     private Graph m_graph;
 
     private GraphView m_graphView;
 
     //Queue abzuarbeitender Knoten / Update: zur PriorityQueue
+    //enqueued nodes
     private PriorityQueue<Node> m_frontierNodes;
 
     //Bereits besuchte Knoten
+    //already visited nodes
     private List<Node> m_exploredNodes;
 
     //Liste des kürzesten weges
+    //list of the shortest Path
     private List<Node> m_pathNodes;
 
     //Farben für den Ablauf info: Color32 für normale RGB Werte Bsp. Color32(216, 216, 216, 255) , Color für float Werte Bsp. Color(0.85f, 0.85f, 0.85f, 1f)
+    //Colors for execution
     public Color startColor = Color.green;
 
     public Color endColor = Color.red;
@@ -37,14 +43,17 @@ public class Pathfinder : MonoBehaviour
     public Color pathColor = Color.cyan;
 
     //Suchvariablen
+    //search variables
     public bool isComplete = false;
 
     private int m_iterations = 0;
 
     //Suche durchführen
+    //execute search
     public void Init(Graph graph, GraphView graphView, Node start, Node end)
     {
         //nichts darf fehlen
+        //nothing missing
         if (start == null || endColor == null || graph == null || graphView == null)
         {
             Debug.LogWarning("There are Mice in the Computer #42! pathfinder_Init_component-missing");
@@ -52,6 +61,7 @@ public class Pathfinder : MonoBehaviour
         }
 
         //start und endpunkt dürfen nicht in wänden liegen
+        //start and endpoints out of walls
         if (start.nodeType == NodeType.Blocked || end.nodeType == NodeType.Blocked)
         {
             Debug.LogWarning("There are Mice in the Computer #42! pathfinder_Init_start/end-blocked");
@@ -59,71 +69,85 @@ public class Pathfinder : MonoBehaviour
         }
 
         //variablen ablegen
+        //variables
         m_graph = graph;
         m_graphView = graphView;
         m_startNode = start;
         m_endNode = end;
 
         //Färben
+        //Coloring
         ShowColors(graphView, start, end);
 
         //initialisierung
+        //initialize
         m_frontierNodes = new PriorityQueue<Node>();
         m_frontierNodes.Enqueue(start);
         m_exploredNodes = new List<Node>();
         m_pathNodes = new List<Node>();
 
         //Durch alle Knoten gehen
+        //move trough all nodes
         for (int x = 0; x < m_graph.Width; x++)
         {
             //Durch alle Knoten gehen
+            //move though all nodes
             for (int y = 0; y < m_graph.Height; y++)
             {
                 //Zurück zum Anfang
+                //back to start
                 m_graph.nodes[x, y].Reset();
             }
         }
 
         //Informationen über den Verlauf der Suche zurücksetzten
+        //informations about the search algorithm
         isComplete = false;
         m_iterations = 0;
         m_startNode.distanceTraveled = 0;
     }
 
     //Überladene ShowColors
+    //overloaded showColors
     private void ShowColors()
     {
         ShowColors(m_graphView, m_startNode, m_endNode);
     }
 
     //Knoten färben
+    //
     private void ShowColors(GraphView graphView, Node start, Node end)
     {
         //Crash durch fehlende Werte vermeiden
+        //avoid crash because of missing values
         if (graphView == null || start == null || end == null)
         {
             return;
         }
 
         //Färben der Knoten die verarbeitet werden
+        //color the nodes
         if (m_frontierNodes != null)
         {
             graphView.ColorNodes(m_frontierNodes.ToList(), frontierColor);
         }
 
         //färben der abgearbeiteteten Knoten
+        //color visited nodes
         if (m_exploredNodes != null)
         {
             graphView.ColorNodes(m_exploredNodes, exploredColor);
         }
 
         //Färben der Knoten des gefundenen Weges
+        //color path nodes
         if (m_pathNodes != null && m_pathNodes.Count > 0)
         {
             graphView.ColorNodes(m_pathNodes, pathColor);
         }
 
         //Start und Endpunkt Färben
+        //color start and endpoint
         NodeView startNodeView = graphView.nodeViews[start.xIndex, start.yIndex];
 
         if (startNodeView != null)
@@ -132,6 +156,7 @@ public class Pathfinder : MonoBehaviour
         }
 
         //Endpunkt färben
+        //color endpoint
         NodeView endNodeView = graphView.nodeViews[end.xIndex, end.yIndex];
         if (endNodeView != null)
         {

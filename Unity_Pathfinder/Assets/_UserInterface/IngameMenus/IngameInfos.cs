@@ -5,11 +5,13 @@ using UnityEngine;
 public class IngameInfos : MonoBehaviour
 {
     //Variablen
+    //Variables
     public TextMeshProUGUI timeText;
 
     public TextMeshProUGUI nodeText;
 
     //Time in textMeshPro setzten
+    //Time of textMeshPro
     public void SetSearchTime(string time)
     {
         Debug.Log("Content of the Time Info: " + time);
@@ -25,6 +27,7 @@ public class IngameInfos : MonoBehaviour
     }
 
     //Node in textMeshPro setzten
+    //Node of textMeshPro
     public void SetSearchNodes(string nodes)
     {
         Debug.Log("Content of the Node Info:" + nodes);
