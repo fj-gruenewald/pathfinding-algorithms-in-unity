@@ -4,7 +4,7 @@ This is a Unity application that allows you to see the most popular search algor
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
 
 The Main Menu:
-![a picture of the Main Menu](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/Screenshots/main_menu.PNG)
+![a picture of the Main Menu](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/%234%20Screenshots/main_menu.PNG)
 
 Planned Features:
   - better Text for the Wiki with explanations of each Algorithm
