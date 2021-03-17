@@ -6,15 +6,6 @@ The program is created with the Unity Engine and the scripts are written in C#. 
 The Main Menu:
 ![a picture of the Main Menu](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/%234%20Screenshots/main_menu.PNG)
 
-Planned Features:
-  - better Text for the Wiki with explanations of each Algorithm
-  - the possibility to use several maps
-  - the possibility to create your own maps
-  - the posibility to generate maps
-  - options to change the start and endpoint
-
-
-
 Current Features:
   - Intelligent Grid System
   - Breadth First Search
@@ -24,4 +15,10 @@ Current Features:
   - Informations about the Algorithms Run
   - A Wiki with Informations about the Algorithms
 
-  
+
+Features for Forkers:
+  - better Text for the Wiki with explanations of each Algorithm
+  - the possibility to use several maps
+  - the possibility to create your own maps
+  - the posibility to generate maps
+  - options to change the start and endpoint  
