@@ -21,4 +21,8 @@ Features for Forkers:
   - the possibility to use several maps
   - the possibility to create your own maps
   - the posibility to generate maps
-  - options to change the start and endpoint  
+  - options to change the start and endpoint 
+
+<br>
+### Do you wanna help make this Application better for learners? <br>
+Send me a Message and become a Contributor
