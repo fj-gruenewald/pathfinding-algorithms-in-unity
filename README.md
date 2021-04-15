@@ -51,18 +51,9 @@ Current Features:
   - A* Search
   - Informations about the Algorithms Run
   - A Wiki with Informations about the Algorithms
-
-
-
-Features for Forkers:
-  - better Text for the Wiki with explanations of each Algorithm
-  - the possibility to use several maps
-  - the possibility to create your own maps
-  - the posibility to generate maps
-  - options to change the start and endpoint 
-  
-  
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+ 
+ 
+See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features and errors that maybe you can add or fix.
 
 <!-- CONTRIBUTING -->
 ## Contributing
