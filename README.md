@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/pathLogo.svg">
+  <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/">
     <img src="img/pathLogo.svg" alt="Logo" width="80" height="80">
   </a>
 
@@ -20,19 +20,19 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot]["https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/main_menu.PNG")
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url] <br/>
 
+<p align="center">
+<img src="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/main_menu.PNG" width="720">
+  </p>
+  
 This is a Unity application that allows you to see the most popular search algorithms graphically at work, with interesting information about each algorithm.
 
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
-
 
 ## Installation and Usage
 
