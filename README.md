@@ -67,13 +67,17 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Do **you** wanna **help** make this Application** better** for learners? <br>
-Write an [Discussion](https://github.com/othneildrew/Best-README-Template/issues) Post and become a Contributor
+Do **you** wanna **help** make this Application **better** for learners? <br>
+Write an [Discussion](https://github.com/othneildrew/Best-README-Template/issues) Post and become a **Contributor**
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+## Credit
+
+Picture: [flaticon.com](https://www.flaticon.com/de/) by the User: [Freepik](https://www.flaticon.com/authors/freepik)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
