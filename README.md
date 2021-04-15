@@ -31,19 +31,16 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">Pathfinding Algorithms in Unity</h3>
 
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/tree/master/Unity_Pathfinder">Project Files</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/tree/master/Setup">Installer</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/tree/master/Builds">Builds</a>
   </p>
 </p>
 
@@ -183,7 +180,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
 
-# Pathfinding-Algorithms-in-Unity
+
 This is a Unity application that allows you to see the most popular search algorithms graphically at work, with interesting information about each algorithm.
 
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
