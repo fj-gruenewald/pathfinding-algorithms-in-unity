@@ -33,15 +33,6 @@ This is a Unity application that allows you to see the most popular search algor
 
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
 
-### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -77,11 +68,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+start the application and select the settings you want in the settings menu, then switch to the algorithms view. in the algorithms view you can see different search algorithms at work, on the right side of the screen there is a menu that allows you to select different search algorithms, change the color of the interface, set the speed of the run and whether there should be any animation at all. In the wiki you can find a short description for each search algorithm. 
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -110,30 +97,13 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
+Do **you** wanna **help** make this Application** better** for learners? <br>
+Write an [Discussion](https://github.com/othneildrew/Best-README-Template/issues) Post and become a Contributor
 
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -149,6 +119,3 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [license-url]: https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/LICENSE.txt
 
 <br>
-
-## Do you wanna help make this Application better for learners? <br>
-Send me a Message and become a Contributor
