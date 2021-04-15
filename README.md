@@ -26,9 +26,10 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url] <br/>
 
-<p align="center">
   This is a Unity application that allows you to see the most popular search algorithms graphically at work <br/>
   With interesting information about each algorithm.
+  
+<p align="center">
 <img src="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/main_menu.PNG" width="720">
   </p>
 
