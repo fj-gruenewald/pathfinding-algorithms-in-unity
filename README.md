@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/pathLogo.svg">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="img/pathLogo.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Pathfinding Algorithms in Unity</h3>
@@ -33,42 +33,11 @@ This is a Unity application that allows you to see the most popular search algor
 
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## Installation and Usage
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-start the application and select the settings you want in the settings menu, then switch to the algorithms view. in the algorithms view you can see different search algorithms at work, on the right side of the screen there is a menu that allows you to select different search algorithms, change the color of the interface, set the speed of the run and whether there should be any animation at all. In the wiki you can find a short description for each search algorithm. 
+The [User Manual](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/wiki/User-Manual) has detailed Information on how the
+Application works.
 
 <!-- ROADMAP -->
 ## Roadmap
