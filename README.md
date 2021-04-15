@@ -26,7 +26,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url] <br/>
 
-  This is a Unity application that allows you to see the most popular search algorithms graphically at work <br/>
+  This is a Unity application that allows you to see the most popular search algorithms graphically at work
   With interesting information about each algorithm.
   
 <p align="center">
