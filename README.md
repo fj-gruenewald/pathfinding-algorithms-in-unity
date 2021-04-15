@@ -68,7 +68,7 @@ See the [open issues](https://github.com/othneildrew/Best-README-Template/issues
 ## Contributing
 
 Do **you** wanna **help** make this Application **better** for learners? <br>
-Write an [Discussion](https://github.com/othneildrew/Best-README-Template/issues) Post and become a **Contributor**
+Write an [Discussion](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/discussions/1) Post and become a **Contributor**
 
 <!-- LICENSE -->
 ## License
