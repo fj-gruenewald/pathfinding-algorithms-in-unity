@@ -53,7 +53,7 @@ Current Features:
   - A Wiki with Informations about the Algorithms
  
  
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features and errors that maybe you can add or fix.
+See the [open issues](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/issues) for a list of proposed features and errors that maybe you can add or fix.
 
 <!-- CONTRIBUTING -->
 ## Contributing
