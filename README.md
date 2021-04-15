@@ -27,10 +27,10 @@
 [![MIT License][license-shield]][license-url] <br/>
 
 <p align="center">
+  This is a Unity application that allows you to see the most popular search algorithms graphically at work <br/>
+  With interesting information about each algorithm.
 <img src="https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/blob/master/img/main_menu.PNG" width="720">
   </p>
-  
-This is a Unity application that allows you to see the most popular search algorithms graphically at work, with interesting information about each algorithm.
 
 The program is created with the Unity Engine and the scripts are written in C#. The project is structured in that a 2D plane is drawn in a 3D project on which the search algorithms can be observed in a kind of coordinate system. 
 
