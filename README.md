@@ -37,8 +37,7 @@ The program is created with the Unity Engine and the scripts are written in C#. 
 
 ## Installation and Usage
 
-The [User Manual](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/wiki/User-Manual) has detailed Information on how the
-Application works.
+The [User Manual](https://github.com/fj-gruenewald/pathfinding-algorithms-in-unity/wiki/User-Manual) has detailed Information on how to use the Application.
 
 <!-- ROADMAP -->
 ## Roadmap
